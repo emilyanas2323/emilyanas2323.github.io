@@ -1,0 +1,29 @@
+#container {
+	width: 1200px;
+	height: 550px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #60EEF1;
+}
+
+#title {
+	color: white;
+	text-align: center;
+	background-color: #FEA0C0;
+	font-family: "Georgia", serif;
+	padding: 15px;
+	margin-top: 0px;
+	border-style: dotted;
+}
+
+#words {
+	color: white;
+	margin-left: 25px;
+	font-size: 20px;
+	font-family: "Georgia", serif;
+	font-weight: bold;
+}
+
+#cat {
+	margin-left: 25px;
+}
