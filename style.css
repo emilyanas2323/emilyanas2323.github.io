@@ -1,7 +1,6 @@
-body {
+body, h1 {
         margin: 0;
         padding: 0;
-        border: 0;
         outline: 0;
         font-size: 100%;
         vertical-align: baseline;
@@ -21,17 +20,28 @@ body {
 	text-align: center;
 	background-color: #FEA0C0;
 	font-family: "Georgia", serif;
-	padding: 15px;
-	margin-top: 0px;
-	border-style: dotted;	
+	padding: 13px;
+	margin: 0px;
+	font-size: 30px;
+	border-style: dotted;
 }
 
-#words {
+#words1 {
 	color: white;
 	margin-left: 25px;
-	font-size: 20px;
+	font-size: 18px;
 	font-family: "Georgia", serif;
-	font-weight: bold;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#words2 {
+	color: white;
+	margin-left: 25px;
+	font-size: 18px;
+	font-family: "Georgia", serif;
+	margin-top: 5px;
+	margin-bottom: 10px;
 }
 
 #cat {
