@@ -44,9 +44,8 @@ body, h1 {
 }
 
 #content {
-	width: 40vw;
+	width: 500px;
 	margin-left: 25px;
-	margin-right: 55vw;
 	border-style: solid;
 	border-color: white;
 	border-width: thin;
