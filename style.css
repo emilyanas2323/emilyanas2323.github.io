@@ -1,11 +1,11 @@
 body, h1 {
-        margin: 0;
-        padding: 0;
-        outline: 0;
-        font-size: 100%;
-        vertical-align: baseline;
-        background: transparent;
-    }
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
 	
 #container {
 	width: 100vw;
@@ -20,15 +20,15 @@ body, h1 {
 	text-align: center;
 	background-color: #FEA0C0;
 	font-family: "Georgia", serif;
-	padding: 13px;
-	margin: 0px;
+	padding: 15px;
+	margin-left: 25px;
+	margin-right: 25px;
 	font-size: 30px;
 	border-style: dotted;
 }
 
 #words1 {
 	color: white;
-	margin-left: 25px;
 	font-size: 18px;
 	font-family: "Georgia", serif;
 	margin-top: 10px;
@@ -37,13 +37,18 @@ body, h1 {
 
 #words2 {
 	color: white;
-	margin-left: 25px;
 	font-size: 18px;
 	font-family: "Georgia", serif;
 	margin-top: 5px;
 	margin-bottom: 10px;
 }
 
-#cat {
+#content {
+	width: 40vw;
 	margin-left: 25px;
+	margin-right: 55vw;
+	border-style: solid;
+	border-color: white;
+	border-width: thin;
+	padding-left: 10px;
 }
