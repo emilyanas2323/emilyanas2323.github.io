@@ -1,18 +1,61 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>My Website</title>
-		<link rel="stylesheet" type="text/css" href="style.css" />
+		<title>Emily's Website</title>
+		<link rel="stylesheet" type="text/css" href="wstyle.css" />
+		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 	</head>
 	<body>
-		<div id="container">
-		<br>
-			<h1 id="title">Emily Anas<h1>
+		<nav>
+			<!--<h1 class="name" >Emily Anas</h1>-->
+			<a class="link-home" href="#home">Home</a>
+			<a class="link-projects" href="#projects">Projects</a>
+			<a class="link-resume" href="#resume">Resume</a>
+			<a class="link-about" href="#about">About Me</a>
+		</nav> 
+		<div class="container">
+			<h1 class="home heading" id="home">Hello World!</h1>
+			<p class="intro">My name is <em>Emily Anas</em>.<br><br>I am a Computer Science student at the University of Waterloo. I love creating useful applications and am experienced with web development.<br>Here are some of <a href="#projects">my projects</a>, <a href="#resume">resume</a>, and a little more <a href="#about">about me</a>.</p>
 			<br>
-			<div id="content">
-				<p id="words1">Don't have much up here yet, here's a photo of a cat:</p>
-				<img id="cat" src="another cutie.jpg" width="487" height="262" alt="A cute kitty" />
-				<p id="words2">Have a nice day!</p>
+			<div class="project-container">
+				<h1 class="projects heading" id="projects">Recent Projects</h1>
+				<h2 class="project-title">Reheart's Website</h2>
+				<div class="reheart-container project-box">
+					<p class="project-text">Hello world Hello World Hello world Hello World Hello world Hello World Hello world Hello World Hello world Hello World.</p>
+					<img class="reheart-img" src="Reheart Screenshot.png"alt="A screenshot of Reheart's website" />
+				</div>
+				<h2 class="project-title">OurCommunitree</h2>
+				<div class="ourcommunitree-container project-box">
+					<img class="ourcommunitree-img" src="Technovation Screenshot.png" alt="Screenshots of the app OurCommunitree" />
+					<p class="project-text">Hello world Hello World Hello world Hello World Hello world Hello World Hello world Hello World Hello world Hello World.</p>
+				</div>
+				<h2 class="project-title">Coming Soon</h2>
+				<div class="coming-soon-container project-box">
+					<p class="project-text">Hello world Hello World Hello world Hello World Hello world Hello World Hello world Hello World Hello world Hello World.</p>
+					<img style="width: 40%; height: 40vh; margin: 15px;" id="cat" src="another cutie.jpg" width="487" height="262" alt="A cute kitty" />
+				</div>
+				<h2 class="project-title">Other Projects</h2>
+				<div class="project-box small-projects-container">
+					<div class="small-project left">
+						<p><b>Project #1</b></p>
+						<p>Hello world Hello World Hello world Hello World Hello world Hello World Hello world Hello World Hello world Hello World.</p>
+					</div>
+					<div class="small-project middle">
+						<p><b>Project #2</b></p>
+						<p>Hello world Hello World Hello world Hello World Hello world Hello World Hello world Hello World Hello world Hello World.</p>
+					</div><div class="small-project right">
+						<p><b>Project #3</b></p>
+						<p>Hello world Hello World Hello world Hello World Hello world Hello World Hello world Hello World Hello world Hello World.</p>
+					</div>
+				</div>
+			</div>
+			<h1 class="heading" id="resume">My Resume</h1>
+			<iframe class="resume" src="ResumeTemplate.pdf" width="1000" height="1300">
+			</iframe>
+			<h1 class="heading" id="about">About Me</h1>
+			<div class="about-me-container project-box">
+				<p class="project-text">I like cats →</p>
+				<img style="width: 40%; height: 40vh; margin: 15px;" id="cat" src="another cutie.jpg" width="487" height="262" alt="A cute kitty" />
 			</div>
 		</div>
 	</body>
