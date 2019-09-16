@@ -1,0 +1,41 @@
+/* General */
+body, div {
+	margin: 0;
+}
+
+.container-fluid {
+	background-color: #CCC8C5;
+}
+
+.sidenav {
+	background-color: #FEF6EF;
+	height: calc(100% - 40px);
+	width: 20vw;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	overflow-x: hidden; /* no horizontal scroll */
+	margin: 20px;
+	border-radius: 5px;
+	padding: 20px;
+}
+
+.sidenav a {
+	display: block;
+	text-decoration: none;
+	color: inherit;
+	margin: 5px 0;
+}
+
+.content {
+	margin: 20px 20px 0px calc(20vw + 40px);
+}
+
+.section {
+	background-color: #FFD7D7;
+	margin-bottom: 20px;
+	padding: 25px;
+	height: 50vh;
+	border-radius: 5px;
+}
