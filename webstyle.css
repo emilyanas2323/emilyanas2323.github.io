@@ -1,4 +1,4 @@
-/* General */
+/* MOBILE */
 body, div {
 	margin: 0;
 }
@@ -7,35 +7,70 @@ body, div {
 	background-color: #CCC8C5;
 }
 
-.sidenav {
+.navbar {
+	display: block;
+	width: 100%;
+	padding: 10px 40px;
+	border-radius: 0 0 5px 5px;
 	background-color: #FEF6EF;
-	height: calc(100% - 40px);
-	width: 20vw;
+}
+
+.container {
+	margin: 0;
+	padding: 0;
+}
+
+.sidenav {
+	display: none;
+	background-color: #FEF6EF;
+	height: 15vh;
+	width: 100%;
 	position: fixed;
 	z-index: 1;
-	top: 0;
-	left: 0;
 	overflow-x: hidden; /* no horizontal scroll */
-	margin: 20px;
 	border-radius: 5px;
-	padding: 20px;
+	margin: 20px;
 }
 
 .sidenav a {
-	display: block;
 	text-decoration: none;
 	color: inherit;
 	margin: 5px 0;
 }
 
 .content {
-	margin: 20px 20px 0px calc(20vw + 40px);
+	margin: 20px 20px 0px 20px;
 }
 
 .section {
+	padding-top: 105px;
+	margin-top: -105px;
+}
+
+.section-content {
 	background-color: #FFD7D7;
 	margin-bottom: 20px;
 	padding: 25px;
-	height: 50vh;
+	height: 60vh;
 	border-radius: 5px;
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 600px) {
+  .navbar {
+	  display: none;
+  }
+  .sidenav {
+	display: block;
+	height: calc(100% - 40px);
+	width: 20vw;
+	padding: 70px 20px;
+  }
+  .content {
+	margin: 20px 20px 0px calc(20vw + 40px);
+  }
+  .section {
+	padding-top: 20px;
+	margin-top: -20px;
+  }
 }
