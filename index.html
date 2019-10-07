@@ -19,7 +19,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="sidenav">
-					<h2>Emily Anas</h2>
+					<a href="file:///C:/Users/emily/Desktop/Side%20Projects/index.html"><p id="name">Emily Anas</p></a>
 					<br>
 					<ul class="navbar-nav">
 						<li class="nav-item">
@@ -29,7 +29,7 @@
 							<a class="nav-link" href="#projects">Projects</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#resume">Resume</a>
+							<a class="nav-link" href="#resume">Experience</a>
 						</li> 
 						<li class="nav-item">
 							<a class="nav-link" href="#contact">Contact</a>
@@ -38,7 +38,7 @@
 				</div>
 				<nav class="navbar sticky-top navbar-light">
 					<div class="container">
-						<a class="navbar-brand" href="#"><h1>Emily Anas</h1></a>
+						<a id="name" href="file:///C:/Users/emily/Desktop/Side%20Projects/index.html"><p>Emily Anas</p></a>
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 							<span class="navbar-toggler-icon"></span>
 						</button>
@@ -51,7 +51,7 @@
 									<a class="nav-link" href="#projects">Projects</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="#resume">Resume</a>
+									<a class="nav-link" href="#resume">Experience</a>
 								</li> 
 								<li class="nav-item">
 									<a class="nav-link" href="#contact">Contact</a>
@@ -62,24 +62,56 @@
 				</nav>
 				<div class="content">
 					<div id="about" class="section">
+						<p class="header">About</p>
 						<div class="section-content">
-							<h2 class="header">About</h2>
-							<p>Welcome!<br><br>My name is Emily Anas and I am a front-end developer who loves making things. I study Computer Science at the University of Waterloo. My interests include: singing, baking, and watching improv performances.</p>
+							<p>Welcome! My name is Emily Anas and I am a front-end developer who loves making things. I study Computer Science at the University of Waterloo. My interests include: singing, playing ping-pong, improv, and watching cartoons.</p>
 						</div>
 					</div>
 					<div id="projects" class="section">
+						<p class="header">Projects</p>
 						<div class="section-content">
-							<h2>Projects</h2>
+							<button class="accordion" id="first-acc">Cat Generator</button>
+							<div class="panel">
+								<p>Created a Cat Generator widget using HTML, CSS, Bootstrap, and JavaScript that allows the user to spawn or erase cats and control settings such as speed, background, and type of cat.</p>							
+							</div>
+							<button class="accordion">Blog Landing Page</button>
+							<div class="panel">
+								<p>Collaborated with Reheart’s UI designer to create a blog landing page using HTML, CSS, Bootstrap, and Liquid according to a given UI design.</p>
+							</div>
+							<button class="accordion">Music Equipment Sign-In System</button>
+							<div class="panel">
+								<p>Designed and implemented an organized digital record of my high school’s music equipment sign out history in Java using MySQL.</p>
+							</div>
 						</div>
 					</div>
 					<div id="resume" class="section">
+						<p class="header">Experience</p>
 						<div class="section-content">
-							<h2>Resume<h2>
+							<!--<p><a href="Resume Sept 7 2019.pdf" download>Preview my resume.</a></p>-->
+							<p>Front-End Developer | Reheart</p>
+							<ul>
+								<li>a</li>
+								<li>b</li>
+								<li>c</li>
+							</ul>
+							<p>Technovation Mentor</p>
+							<ul>
+								<li>a</li>
+								<li>b</li>
+								<li>c</li>
+							</ul>
+							<p>Receptionist | Oak Ridges Endoscopy Centre</p>
+							<ul>
+								<li>a</li>
+								<li>b</li>
+								<li>c</li>
+							</ul>
 						</div>
 					</div>
 					<div id="contact" class="section">
+						<p class="header">Contact</p>
 						<div class="section-content">
-							<h2>Contact</h2>
+							<p>Send me an email at eanas@edu.uwaterloo.ca :)</p>
 						</div>
 					</div>
 				</div>
@@ -87,3 +119,21 @@
 		</div>
 	</body>
 </html>
+
+<script>
+	var acc = document.getElementsByClassName("accordion");
+	var i;
+
+	for (i = 0; i < acc.length; i++) {
+	  acc[i].addEventListener("click", function() {
+		this.classList.toggle("active");
+		var panel = this.nextElementSibling;
+		
+		if (panel.style.maxHeight){
+		  panel.style.maxHeight = null;
+		} else {
+		  panel.style.maxHeight = panel.scrollHeight + "px";
+		} 
+	  });
+	}
+</script>
