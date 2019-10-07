@@ -66,6 +66,11 @@ body, div, p {
 	margin: 5vh 10px 0 10px;
 }
 
+.title {
+	font-size: 30px;
+	margin-bottom: 15px;
+}
+
 #about .section-content {
 	background-color: #FDF0EA;
 	text-align: center;
@@ -179,5 +184,8 @@ button:focus {
   .section-content {
 	  margin-bottom: 25px;
 	  padding: 30px 100px;
+  }
+  #about .section-content {
+	text-align: left;
   }
 }
