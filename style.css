@@ -1,0 +1,71 @@
+.container-fluid {
+    background-color: #DCDCDC;
+}
+
+.container {
+    background: #F1F1F1;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.desc {
+    font-family: 'Varela', Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #000000;
+    padding-bottom: 5px;
+}
+
+.heading {
+    font-family: 'Varela', Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    line-height: 50px;
+    color: #4E4E4E;
+    margin-bottom: 40px;
+}
+
+.pink {
+    color: #EE70AD;
+}
+
+.link {
+    color: #858585;
+}
+
+.link:hover {
+    color: #858585;
+    text-decoration: underline;
+}
+
+@media only screen and (min-width: 900px) {
+    .background {
+        padding: 5vh 20vw;
+    }
+
+    .content {
+        padding: 13vh 8vw;
+    }
+  }
+
+  @media only screen and (max-width: 900px) {
+    .background {
+        padding: 5vh 11vw;
+    }
+
+    .content {
+        padding: 10vh 8vw;
+    }
+  }
+
+  @media only screen and (max-width: 450px) {
+    .desc {
+        font-size: 14px;
+    }
+
+    .heading {
+        font-size: 28px;
+        line-height: 40px;
+    }
+
+    .content {
+        padding: 7vh 8vw;
+    }
+  }
