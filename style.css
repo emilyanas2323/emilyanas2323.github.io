@@ -37,17 +37,17 @@
 
 @media only screen and (min-width: 900px) {
     .background {
-        padding: 5vh 20vw;
+        padding: 15vh 20vw;
     }
 
     .content {
-        padding: 13vh 8vw;
+        padding: 14vh 8vw;
     }
   }
 
   @media only screen and (max-width: 900px) {
     .background {
-        padding: 5vh 11vw;
+        padding: 8vh 11vw;
     }
 
     .content {
@@ -62,10 +62,6 @@
 
     .heading {
         font-size: 28px;
-        line-height: 40px;
-    }
-
-    .content {
-        padding: 7vh 8vw;
+        margin-bottom: 0;
     }
   }
