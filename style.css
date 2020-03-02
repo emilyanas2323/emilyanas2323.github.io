@@ -53,6 +53,10 @@
     .content {
         padding: 10vh 8vw;
     }
+
+    .heading {
+        line-height: 40px;
+    }
   }
 
   @media only screen and (max-width: 450px) {
@@ -62,6 +66,5 @@
 
     .heading {
         font-size: 28px;
-        margin-bottom: 0;
     }
   }
