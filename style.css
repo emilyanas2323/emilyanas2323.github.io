@@ -1,5 +1,6 @@
 .container-fluid {
     background-color: #DCDCDC;
+    min-height: 100vh;
 }
 
 .container {
@@ -19,7 +20,6 @@
     font-size: 36px;
     line-height: 50px;
     color: #4E4E4E;
-    margin-bottom: 40px;
 }
 
 .pink {
@@ -37,34 +37,51 @@
 
 @media only screen and (min-width: 900px) {
     .background {
-        padding: 15vh 20vw;
+        padding: 8vh 11vw;
     }
 
     .content {
-        padding: 14vh 8vw;
+        padding: 12vh 6vw;
+    }
+
+    .heading {
+        margin-bottom: 40px;
     }
   }
 
   @media only screen and (max-width: 900px) {
     .background {
-        padding: 8vh 11vw;
+        padding: 7vh 8vw;
     }
 
     .content {
-        padding: 10vh 8vw;
+        padding: 8vh 7vw;
     }
 
     .heading {
         line-height: 40px;
     }
+
+    .heading {
+        margin-bottom: 40px;
+    }
   }
 
   @media only screen and (max-width: 450px) {
+    .background {
+        padding: 5vh 6vw;
+    }
+    
+    .content {
+        padding: 5vh 7vw;
+    }
+    
     .desc {
         font-size: 14px;
     }
 
     .heading {
         font-size: 28px;
+        margin-bottom: 20px;
     }
   }
