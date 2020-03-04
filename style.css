@@ -35,9 +35,23 @@
     text-decoration: underline;
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1200px) {
     .background {
         padding: 8vh 18vw;
+    }
+
+    .content {
+        padding: 12vh 6vw;
+    }
+
+    .heading {
+        margin-bottom: 40px;
+    }
+  }
+
+@media only screen and (min-width: 1000px) {
+    .background {
+        padding: 8vh 15vw;
     }
 
     .content {
