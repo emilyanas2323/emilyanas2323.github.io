@@ -85,3 +85,22 @@
         margin-bottom: 20px;
     }
   }
+
+  @media only screen and (max-width: 400px) {
+    .background {
+        padding: 4vh 5vw;
+    }
+    
+    .content {
+        padding: 4vh 6vw;
+    }
+    
+    .desc {
+        font-size: 14px;
+    }
+
+    .heading {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+  }
