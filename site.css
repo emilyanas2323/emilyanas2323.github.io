@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+#header {
+    background-image: url("background.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#header-title {
+    font-size: 68px;
+    margin-bottom: 25px;
+}
+
+#header-desc {
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+
+#header-btn {
+    /*background-color: #7735B8;*/
+    background-color: #E688A4;
+    font-size: 24px;
+    color: white;
+}
+
+.text-section {
+    color: #787878;
+    font-size: 20px;
+    padding: 85px 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#blog-banner {
+    background-color: #FFE5EA;
+    font-size: 56px;
+    font-family: 'Quicksand', sans-serif;
+    color: #515151;
+}
+
+#blog-preview {
+    padding: 50px 0;
+    color: #717171;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 70px;
+}
+
+.blog-title {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.blog-desc {
+    margin-bottom: 40px;
+    font-size: 20px;
+}
+
+.blog-link, .blog-link:hover {
+    color: #717171;
+    font-size: 22px;
+}
