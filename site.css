@@ -11,6 +11,12 @@
     color: white;
 }
 
+div.transbox {
+    background-color: rgba(92,92,92,0.5);
+    height: 100%;
+    width: 100%;
+}
+
 #header-title {
     font-size: 68px;
     margin-bottom: 25px;
@@ -18,9 +24,9 @@
 }
 
 #header-desc {
-    font-size: 30px;
+    font-size: 31px;
     padding-bottom: 10px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Quicksand', sans-serif;
 }
 
 #header-btn {
@@ -33,7 +39,7 @@
 
 .text-section {
     padding-top: 70px;
-    padding-bottom: 45px;
+    padding-bottom: 10px;
 }
 
 .text-section > p, #product-desc {
@@ -53,6 +59,7 @@
     font-weight: bold;
     color: #515151;
     padding-bottom: 25px;
+    padding-top: 20px;
 }
 
 .product-images > img {
