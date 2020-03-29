@@ -9,17 +9,18 @@
     background-size: cover;
     height: 100vh;
     color: white;
-    font-family: 'Quicksand', sans-serif;
 }
 
 #header-title {
     font-size: 68px;
     margin-bottom: 25px;
+    font-family: 'Quicksand', sans-serif;
 }
 
 #header-desc {
     font-size: 30px;
     padding-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #header-btn {
@@ -27,14 +28,40 @@
     background-color: #E688A4;
     font-size: 24px;
     color: white;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .text-section {
-    color: #787878;
+    padding-top: 70px;
+    padding-bottom: 45px;
+}
+
+.text-section > p, #product-desc {
     font-size: 20px;
-    padding: 85px 0;
+    padding-bottom: 40px;
+    color: #787878;
     font-family: 'Montserrat', sans-serif;
 }
+
+.text-section > hr {
+    border-top: 1px solid #A6A6A6;
+}
+
+#product-title {
+    font-size: 48px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    color: #515151;
+    padding-bottom: 25px;
+}
+
+.product-images > img {
+    padding-bottom: 25px;
+}
+
+.product-images {
+    padding-bottom: 30px;
+} 
 
 #blog-banner {
     background-color: #FFE5EA;
@@ -44,14 +71,15 @@
 }
 
 #blog-preview {
-    padding: 50px 0;
+    padding-top: 50px;
+    padding-bottom: 80px;
     color: #717171;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     margin: 0 70px;
 }
 
 .blog-title {
-    font-size: 36px;
+    font-size: 38px;
     margin-bottom: 40px;
 }
 
@@ -63,4 +91,43 @@
 .blog-link, .blog-link:hover {
     color: #717171;
     font-size: 22px;
+}
+
+#footer-section {
+    min-height: 35vh;
+    background-color: #F1F1F1;
+}
+
+#footer {
+    padding-top: 40px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#footer-bottom {
+    border-bottom: 1px solid #A6A6A6;
+}
+
+#social-section {
+    border-top: 1px solid #A6A6A6;
+    font-size: 22px;
+    padding-top: 15px;
+}
+
+#social-icons > a {
+    padding-top: 6px;
+    margin-right: 7px;
+    padding-bottom: 25px;
+}
+
+#content-section {
+    border-top: 1px solid #A6A6A6;
+    font-size: 22px;
+    padding-top: 15px;
+    padding-bottom: 50px;
+}
+
+#content-section > p {
+    padding-top: 8px;
+    font-size: 15px;
+    font-family: 'Quicksand', sans-serif;
 }
