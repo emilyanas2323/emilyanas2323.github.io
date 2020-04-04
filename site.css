@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
-html {
-    overflow-y: hidden;
+body {
+    overflow-x: hidden;
 }
 
 #header {
