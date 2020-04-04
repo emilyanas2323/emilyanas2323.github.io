@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
+body {
+    overflow-y: hidden;
+}
+
 #header {
     background-image: url("https://emilyanas2323.github.io/background.jpg");
     background-position: center center;
