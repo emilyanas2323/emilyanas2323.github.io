@@ -142,3 +142,15 @@ div.transbox {
     font-size: 15px;
     font-family: 'Quicksand', sans-serif;
 }
+
+.bold-text {
+    font-weight: bold !important;
+}
+
+.italics-text {
+    font-style: italic;
+}
+
+.underline-text {
+    text-decoration: underline !important;
+}
