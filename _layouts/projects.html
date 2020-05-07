@@ -1,0 +1,58 @@
+---
+layout: default
+---
+<div class="container-fluid">
+    <div class="row">
+        <div id="project-header" class="col-12 header">
+            <div class="transbox d-flex justify-content-center align-items-center text-center">
+                <p class="page-title my-0">Latest Projects</p>
+            </div>
+        </div>
+    </div>
+    <div class="container d-flex flex-column align-items-center" id="project-container">
+        <div class="row project-card mx-1">
+            <div class="col-lg-6 col-12 order-last order-lg-first d-flex align-items-center">
+                <div class="project-content">
+                    <p class="project-title">Website Editor</p>
+                    <hr class="title-underline">
+                    <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p><a href="file:///C:/Users/emily/Desktop/Website Editor/index.html" class="project-btn">View Project →</a></p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-12 order-first order-lg-last project-img text-center">
+                <video autoplay loop class="embed-responsive project-video">
+                    <source src="/assets/editor-preview.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+        <div class="row project-card mx-2">
+            <div class="col-lg-6 col-12 order-last order-lg-first d-flex align-items-center">
+                <div class="project-content">
+                    <p class="project-title">Cat Generator</p>
+                    <hr class="title-underline">
+                    <p class="project-description">Try clicking the spawn button on the right!<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p><a href="/cat-generator/" class="project-btn">View Project →</a></p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-12 order-first order-lg-last project-img text-center img-responsive">
+                {% include cat-generator.inc %}
+            </div>
+        </div>
+        <div class="row project-card mx-2">
+            <div class="col-lg-6 col-12 order-last order-lg-first d-flex align-items-center">
+                <div class="project-content">
+                    <p class="project-title">Sample Website</p>
+                    <hr class="title-underline">
+                    <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p><a href="" class="project-btn">View Project →</a></p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-12 order-first order-lg-last project-img text-center">
+                <video autoplay loop class="embed-responsive" style="margin: 20px 0; border: 1px solid #c4c4c4;">
+                    <source src="/assets/sample-website.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+    

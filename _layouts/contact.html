@@ -1,0 +1,68 @@
+---
+layout: default
+---
+<div class="container-fluid" style="background-color: #F8F9FA;">
+    <div class="row">
+        <div id="contact-header" class="col-12 header">
+            <div class="transbox d-flex justify-content-center align-items-center text-center">
+                <p class="page-title my-0">Get In Touch</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2 col-12">
+            <div id="contact-card" style="background-color: white;">
+                <p id="form-title">Say Hello!</p>
+                <p id="form-description">Contact me using the form below or directly by email: <a href="mailto:eanas@uwaterloo.ca">eanas@uwaterloo.ca</a>.</p>
+                <!--form action="mail.php" method="POST"-->
+                <form>
+                    <div class="row">
+                        <div class="col-md-6 col-12">
+                            <input type="text" name="name" placeholder="Name" class="form-field" id="input-name">
+                        </div>
+                        <div class="col-md-6 col-12">
+                            <input type="text" name="email" placeholder="Preferred Email" class="form-field" id="input-email">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                                <input type="text" name="subject" placeholder="Subject" class="form-field" id="input-subject">
+                            </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <textarea name="message" placeholder="Message" id="input-message"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <input type="submit" onclick="sendMail()" value="Send Message →" id="submit-btn">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function sendMail(){
+        var name = document.getElementById("input-name").value;
+        var email = document.getElementById("input-email").value;
+        var subject = document.getElementById("input-subject").value;
+        var message = $("#input-message").val().replace(/\r\n|\r|\n/g,"%0D%0A");
+        var body = "";
+        if(name) {
+            body = body + "From: " + name + "%0D%0A";
+        }
+        if(email) {
+            body = body + "Preferred point of contact: " + email + "%0D%0A"
+        }
+        if (name || email) {
+            body = body + "%0D%0A";
+        }
+        body = body + message + "%0D%0A%0D%0A";
+        var email = "mailto:eanas@uwaterloo.ca?subject=" + subject + "&body=" + body;
+        window.location.href = email;
+    }
+</script>
