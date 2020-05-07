@@ -1,0 +1,461 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+/*
+'Open Sans', sans-serif;
+'Roboto Slab', serif;
+*/
+
+body {
+    overflow-y: scroll;
+}
+
+/* Navbar */
+.navbar {
+    font-family: 'Roboto Slab', serif;
+    background-color: white;
+    border-bottom: 1px solid rgba(194, 194, 194, 0.3);
+}
+
+#site-nav {
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.nav-item {
+    margin-left: 9px;
+}
+
+.navbar-home {
+    border: none;
+}
+
+#nav-brand {
+    color: #33373B;
+    font-size: 30px;
+}
+
+#navbarNavDropdown {
+    color: #747D84;
+    font-size: 18px;
+}
+
+#nav-divider {
+    margin: 0;
+    border: 2px solid rgba(245, 106, 106, 0.6);
+}
+
+@media (max-width: 768px) {
+    #site-nav {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+
+/* Homepage */
+#home-container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+#home-content {
+    min-height: calc(100vh - 120px);
+}
+
+.title {
+    font-family: 'Roboto Slab', serif;
+    color: #33373B;
+    font-size: 2.25em;
+    margin-bottom: 32px;
+}
+
+.description, .project-description, .job-description {
+    font-family: 'Open Sans', sans-serif;
+    color: #7F888F;
+    font-size: 16px;
+    padding-bottom: 28px;
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+.home-btn, .project-btn {
+    font-family: 'Open Sans', sans-serif;
+    color: rgba(245, 106, 106, 0.6);
+    font-size: 17px;
+    border: 2px solid rgba(245, 106, 106, 0.6);
+    padding: 7px 12px;
+    border-radius: 3px;
+    outline: none;
+    font-size: 1em;
+}
+
+.home-btn:hover, .project-btn:hover {
+    color: white;
+    background-color: rgba(245, 106, 106, 0.6);
+    text-decoration: none;
+    border: 2px solid rgba(245, 106, 106, 0.05);;
+}
+
+#home-img {
+    border-radius: 5px;
+    max-height: 550px;
+}
+
+.overlay {
+    position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+#home-divider {
+    border: 1px solid #DADCDF;
+}
+
+@media (max-width: 768px) {
+    #home-container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    #home-text {
+        order: 2;
+    }
+
+    #home-img {
+        order: 1;
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .title {
+        font-size: 1.75em;
+        padding-top: 15px;
+        margin-bottom: 20px;
+    }
+
+    .description {
+        padding-bottom: 20px;
+    }
+
+    .description, .home-btn {
+        font-size: 16px;
+    }
+}
+
+/* Projects */
+.header {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 56vh;
+}
+
+#project-header {
+    background-image: url("/assets/images/donovan-valdivia-qZMf--caObE-unsplash.jpg");
+    padding: 0;
+}
+
+.transbox {
+    background-color: rgba(92,92,92,0.45);
+    height: 100%;
+    width: 100%;
+}
+
+.page-title {
+    font-size: 50px;
+    font-family: 'Roboto Slab', serif;
+    color: white;
+}
+
+#project-container {
+    background: #F8F9FA;
+}
+
+.project-card {
+    background-color: white;
+    margin-bottom: 45px;
+    padding: 15px 30px 15px 30px;
+    border: 1px solid rgba(194, 194, 194, 0.4);
+    border-radius: 3px;
+}
+
+.project-card:first-child {
+    margin-top: 50px;
+}
+
+.project-title {
+    font-size: 28px;
+    font-family: 'Roboto Slab', serif;
+    margin: 0;
+}
+
+.project-description {
+    padding-bottom: 18px;
+}
+
+.title-underline {
+    border: 2px solid rgba(245, 106, 106, 0.5);
+    width: 80%;
+    margin-left: 0;
+    margin-top: 8px;
+    margin-bottom: 30px;
+}
+
+.project-card > .project-img {
+    padding: 0;
+    /*background-color: #d1d1d1;*/
+}
+
+.project-img > img {
+    max-height: 400px;
+}
+
+@media (max-width: 992px) { 
+    .project-card {
+        padding: 0px 25px 25px;
+        max-width: 525px;
+    }
+
+    .project-title {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 768px) { 
+    .header {
+        height: 40vh;
+    }
+
+    .page-title {
+        font-size: 40px;
+    }
+
+    .project-card {
+        margin-bottom: 32px;
+        padding: 0 15px 15px;
+    }
+
+    .project-card:first-child {
+        margin-top: 35px;
+    }
+
+    #project-container {
+        padding: 0;
+    }
+
+    .project-title {
+        font-size: 23px;
+        margin-top: 15px;
+    }
+
+    .title-underline {
+        margin-bottom: 15px;
+    }
+
+    .project-description {
+        font-size: 16px;
+    }
+}
+
+
+/* Experience */
+#work-banner {
+    height: 56vh;
+    background-color: rgba(245, 106, 106, 0.4);;
+}
+
+#experience-row {
+    margin-bottom: 55px;
+    margin-top: 30px;
+}
+
+.work-card {
+    position: relative;
+    margin-top: 90px; 
+    padding-top: 75px;
+    border: 1px solid #C2C2C2;
+    border-radius: 10px;
+}
+
+.icon-item {
+    position: absolute;
+    top: -60px;
+}
+
+.work-icon {
+    width: 70px;
+    height: 70px;
+}
+
+.icon-background {
+    background-color: #EDEDED;
+    height: 110px;
+    width: 110px;
+    border-radius: 50%;
+}
+
+.icon-border {
+    background-color: white;
+    border: 2px solid #EDEDED;
+    height: 125px;
+    width: 125px;
+    border-radius: 50%;
+}
+
+.job-title {
+    font-family: 'Roboto Slab', serif;
+    font-size: 21.5px;
+    color: #33373B;
+    margin-top: 7px;
+    margin-bottom: 0px;
+}
+
+.job-company {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18.5px;
+    color: rgba(245, 106, 106, 0.6);
+}
+
+.job-description {
+    padding: 10px 24px 50px 24px;
+    margin: 0;
+}
+
+@media (max-width: 768px) { 
+    #work-banner {
+        height: 40vh;
+    }
+
+    #experience-row {
+        margin-top: 5px;
+        margin-bottom: 30px;
+    }
+
+    #experience-container {
+        padding: 0 5px;
+    }
+
+    .job-title {
+        font-size: 20px;
+    }
+    
+    .job-company {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    
+    .job-description {
+        font-size: 16px;
+        padding-bottom: 25px;
+    }
+}
+
+
+/* Contact */
+#contact-header {
+    background-image: url("/assets/images/natanja-grun-X2s8GhnQmds-unsplash\(1\).jpg");
+    padding: 0;
+}
+
+#contact-card {
+    border: 1px solid #C2C2C2;
+    border-radius: 5px;
+    margin: 70px 0;
+    padding: 40px 60px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#form-title {
+    font-family: 'Roboto Slab', serif;
+    color: rgba(245, 106, 106, 0.5);
+    font-size: 36px;
+    margin-bottom: 6px;
+}
+
+#form-description {
+    font-size: 1.1em;
+    color: #7F888F;
+    margin-bottom: 30px;
+}
+
+#form-description > a {
+    color: rgba(245, 106, 106, 0.5);
+    text-decoration: none;
+}
+
+#form-description > a:hover {
+    color: rgba(245, 106, 106, 0.5);
+    text-decoration: underline;
+}
+
+.form-field {
+    height: 37px;
+    padding-left: 10px;
+    font-size: 1rem;
+    color: #969696;
+    border: 1px solid #C2C2C2;
+    border-radius: 3px;
+    width: 100%;
+}
+
+form > div {
+    margin-bottom: 30px;
+}
+
+textarea {
+    height: 140px;
+    min-height: 70px;
+    padding-left: 10px;
+    padding-top: 3px;
+    font-size: 0.9rem;
+    color: #969696;
+    border: 1px solid #C2C2C2;
+    border-radius: 3px;
+    width: 100%;
+}
+
+#submit-btn {
+    width: 235px;
+    font-size: 1.05rem;
+    color: white;
+    background-color: rgba(245, 106, 106, 0.5);
+    padding: 8px;
+    border: 1.75px solid rgba(245, 106, 106, 0.05);
+    border-radius: 3px;
+}
+
+#submit-btn:hover {
+    color: rgba(245, 106, 106, 0.5);
+    background-color: white;
+    border: 1.75px solid rgba(245, 106, 106, 0.6);
+}
+
+@media (max-width: 768px) { 
+    #contact-card {
+        margin: 37px 5px;
+        padding: 20px 20px 10px;
+    }
+
+    #form-title {
+        font-size: 30px;
+    }
+    
+    #form-description, .form-field, textarea {
+        font-size: 16px;
+        height: auto;
+    }
+
+    form > .row, #input-name {
+        margin-bottom: 20px;
+    }
+}
