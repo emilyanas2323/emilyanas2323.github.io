@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
-/*
-'Open Sans', sans-serif;
-'Roboto Slab', serif;
-*/
-
 body {
     overflow-y: scroll;
 }
@@ -157,7 +152,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    height: 56vh;
+    height: 51vh;
 }
 
 #project-header {
@@ -184,13 +179,17 @@ body {
 .project-card {
     background-color: white;
     margin-bottom: 45px;
-    padding: 15px 30px 15px 30px;
+    padding: 30px;
     border: 1px solid rgba(194, 194, 194, 0.4);
     border-radius: 3px;
 }
 
+.project-card:last-of-type {
+    padding: 5px 30px;
+}
+
 .project-card:first-child {
-    margin-top: 50px;
+    margin-top: 60px;
 }
 
 .project-title {
@@ -203,6 +202,14 @@ body {
     padding-bottom: 18px;
 }
 
+.project-description > a {
+    color: rgba(245, 106, 106, 0.5);
+}
+
+.project-description > a:hover {
+    color: rgba(245, 106, 106, 0.5);
+}
+
 .title-underline {
     border: 2px solid rgba(245, 106, 106, 0.5);
     width: 80%;
@@ -211,18 +218,13 @@ body {
     margin-bottom: 30px;
 }
 
-.project-card > .project-img {
-    padding: 0;
-    /*background-color: #d1d1d1;*/
-}
-
-.project-img > img {
-    max-height: 400px;
+.project-video {
+    max-height: 300px;
 }
 
 @media (max-width: 992px) { 
     .project-card {
-        padding: 0px 25px 25px;
+        padding: 25px;
         max-width: 525px;
     }
 
@@ -233,7 +235,7 @@ body {
 
 @media (max-width: 768px) { 
     .header {
-        height: 40vh;
+        height: 35vh;
     }
 
     .page-title {
@@ -242,7 +244,7 @@ body {
 
     .project-card {
         margin-bottom: 32px;
-        padding: 0 15px 15px;
+        padding: 25px 15px 15px;
     }
 
     .project-card:first-child {
@@ -270,7 +272,7 @@ body {
 
 /* Experience */
 #work-banner {
-    height: 56vh;
+    height: 51vh;
     background-color: rgba(245, 106, 106, 0.4);;
 }
 
@@ -333,7 +335,7 @@ body {
 
 @media (max-width: 768px) { 
     #work-banner {
-        height: 40vh;
+        height: 35vh;
     }
 
     #experience-row {
@@ -370,7 +372,7 @@ body {
 #contact-card {
     border: 1px solid #C2C2C2;
     border-radius: 5px;
-    margin: 70px 0;
+    margin: 60px 0;
     padding: 40px 60px;
     font-family: 'Open Sans', sans-serif;
 }
