@@ -236,5 +236,6 @@ var game = (function () {
 
 })();
 
-
-game.start();
+window.onload = function(e){ 
+	game.start();
+};

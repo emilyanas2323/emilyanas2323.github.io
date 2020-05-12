@@ -239,5 +239,7 @@ var game = (function () {
 
 })();
 
+window.onload = function(e){ 
+	game.start();
+};
 
-game.start();
