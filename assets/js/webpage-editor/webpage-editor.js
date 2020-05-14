@@ -318,7 +318,7 @@ $("#update-section-color").click(function() {
 /* Site code export */
 $('#export-btn').click(function () { 
     var html = $('#section-container').html();
-    var head = "<head>\n<title>Website</title>\n<link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' integrity='sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh' crossorigin='anonymous'>\n<link rel='stylesheet' type='text/css' href='https://emilyanas2323.github.io/site.css'>\n</head>\n";
+    var head = "<head>\n<title>Website</title>\n<link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' integrity='sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh' crossorigin='anonymous'>\n<link rel='stylesheet' type='text/css' href='https://emilyanas2323.github.io/assets/css/editor-site.css'>\n</head>\n";
     $('#html-code').val("<html>\n" + head + "<body>" + html + "</body>\n</html>");
 });
 
