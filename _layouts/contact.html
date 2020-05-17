@@ -63,6 +63,6 @@ layout: default
         }
         body = body + message + "%0D%0A%0D%0A";
         var email = "mailto:eanas@uwaterloo.ca?subject=" + subject + "&body=" + body;
-        window.location.href = email, true;
+        window.open(email, '_top');
     }
 </script>
