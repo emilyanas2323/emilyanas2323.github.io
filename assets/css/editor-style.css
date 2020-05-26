@@ -7,6 +7,14 @@
     height: 100vh;
 }
 
+textarea:focus, input:focus {
+    outline: none;
+}
+
+.close:focus {
+    outline: none;
+}
+
 #section-editor {
     margin: 13px;
     font-family: Verdana, 'Segoe UI', sans-serif;
@@ -226,6 +234,8 @@ img.move-up, img.move-down, img.section-settings {
     background-color: #FFCAE3 !important;
     margin: 0px;
     padding: 0 0 4px 0 !important;
+    outline: none;
+    box-shadow: none;
 }
 
 .input-teal {
@@ -242,6 +252,8 @@ img.move-up, img.move-down, img.section-settings {
     background-color: #8AEBF1 !important;
     margin: 0px;
     padding: 0 0 4px 0 !important;
+    outline: none;
+    box-shadow: none;
 }
 
 .styling-icons {
