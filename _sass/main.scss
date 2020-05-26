@@ -5,6 +5,10 @@ body {
     overflow-y: scroll;
 }
 
+textarea:focus, input:focus {
+    outline: none;
+}
+
 /* Navbar */
 .navbar {
     font-family: 'Roboto Slab', serif;
