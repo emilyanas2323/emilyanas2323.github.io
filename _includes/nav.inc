@@ -36,9 +36,9 @@
       </div>
       <div class="modal-body">
         <p class="modal-body-title">Photos</p>
-        <p>Taken by <a href="https://unsplash.com/@esteejanssens">Estée Janssens</a>, <a href="https://unsplash.com/@donovan_valdivia">Donovan Valdivia</a>, and <a href="https://unsplash.com/@natanja">Natanja Grün</a> on <a href="https://unsplash.com/@natanja">Unsplash</a>.</p>
+        <p>Taken by <a href="https://unsplash.com/@esteejanssens" target="_blank">Estée Janssens</a>, <a href="https://unsplash.com/@donovan_valdivia" target="_blank">Donovan Valdivia</a>, and <a href="https://unsplash.com/@natanja" target="_blank">Natanja Grün</a> on <a href="https://unsplash.com/" target="_blank">Unsplash</a>.</p>
         <p class="modal-body-title">Icons</p>
-        <p>Made by <a href="https://www.flaticon.com/authors/freepik">Freepik</a> and <a href="https://www.flaticon.com/authors/pixel-perfect">Pixel perfect</a> from <a href="http://www.flaticon.com/">www.flaticon.com</a>.</p>
+        <p>Made by <a href="https://www.flaticon.com/authors/freepik" target="_blank">Freepik</a> and <a href="https://www.flaticon.com/authors/pixel-perfect" target="_blank">Pixel perfect</a> from <a href="http://www.flaticon.com/" target="_blank">www.flaticon.com</a>.</p>
         <p class="modal-body-title">Website</p>
         <p>Designed and developed by Emily Anas.</p>
       </div>
