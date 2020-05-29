@@ -18,7 +18,7 @@
                 <a class="nav-link" href="/contact/">Contact</a>
             </li>
             <li class="nav-item" id="attribution-link">
-                <a type="button" class="nav-link" data-toggle="modal" data-target="#attributionModal">Attribution</a>
+                <a class="nav-link" data-toggle="modal" data-target="#attributionModal">Attribution</a>
             </li>
         </ul>
     </div>
