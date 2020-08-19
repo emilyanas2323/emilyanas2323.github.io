@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Webpage Editor</title>
+        
+        <link rel="stylesheet" type="text/css" href="/assets/css/editor-style.css">
+        <script defer src="/assets/js/webpage-editor/webpage-editor.js" charset="utf-8"></script>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Editor -->
+                <div class="col-md-3 p-0">
+                    <div id="section-editor">
+                    <div id="website-editor" class="">
+                        <p>Webpage Editor</p>
+                    </div>
+                    <div class="section-menu">
+                        <div id="sections" class="border border-bottom-0">
+                            <p>Sections</p>
+                        </div>
+                            <div id="accordion" class="border border-top-0">
+
+                                <!-- Header Panel -->
+                                <div>
+                                    <div class="panel-heading border-bottom border-top" id="headingOne">
+                                        <div class="mb-0 d-inline d-flex justify-content-between align-items-center">
+                                            <div class="btn d-flex align-items-center" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                <img class="section-icon" height=25 src="/assets/images/webpage-editor/icons/header.png">
+                                                <p class="main-panel-label">Header</p>
+                                            </div>
+                                            <div class="mr-2">
+                                                <img class="btn section-settings" height=25 src="/assets/images/webpage-editor/icons/settings.png" data-toggle="modal" data-target="#settingsModal">
+                                                <img class="btn move-up" name="header-section" height=25 src="/assets/images/webpage-editor/icons/up-arrow(1).png">
+                                                <img class="btn move-down" name="header-section" height=25 src="/assets/images/webpage-editor/icons/down-arrow(1).png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="collapseOne" class="collapse show panel" aria-labelledby="headingOne" data-parent="#accordion">
+                                        <div class="" id="child1">
+                                            <div class="">
+                                                <div class="btn d-flex align-items-center">
+                                                    <img class="section-icon" height=20 src="/assets/images/webpage-editor/icons/text.png">
+                                                    <p class="panel-label" data-toggle="collapse" data-target="#collapseOneA">Title</p>
+                                                </div>
+                                                <div class="collapse show panel-content" data-parent="#child1" id="collapseOneA">
+                                                    <p>Content:</p>
+                                                    <div class="input-group">
+                                                        <input type="text" class="text-value input-pink rounded-left" placeholder="Text">
+                                                        <div class="input-group-append">
+                                                            <button class="text-change btn btn-pink shadow-none rounded-right"><img height=18 src="/assets/images/webpage-editor/icons/checkmark-24.png"></button>
+                                                        </div>
+                                                    </div>
+                                                    <p>Styling:</p>
+                                                    <div class="d-flex styling-icons align-items-center">
+                                                        <img class="section-icon bold-btn" height=18 src="/assets/images/webpage-editor/icons/styling/bold.png">
+                                                        <img class="section-icon italic-btn" height=18 src="/assets/images/webpage-editor/icons/styling/italic.png">
+                                                        <img class="section-icon underline-btn" height=18 src="/assets/images/webpage-editor/icons/styling/underline.png">
+                                                        <label class="color-label section-icon text-center"><img height=18 src="/assets/images/webpage-editor/icons/styling/colour.png"><input style="display: none;" class="color-picker" type="color" value="#f5c0bc"></label>
+                                                        <label class="color-label section-icon text-center"><img height=20 src="/assets/images/webpage-editor/icons/styling/marker.png"><input style="display: none;" class="back-color-picker" type="color" value="#f5c0bc"></label>
+                                                        <img class="section-icon cancel-btn" height=19 src="/assets/images/webpage-editor/icons/styling/cancel.png">
+                                                    </div>
+                                                    <p>Font Size:</p>
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <input type="range" min="8" max="72" value="68" class="myslider" id="sliderRange">
+                                                        <p style="padding: 6px; margin: 0 6px 6px 6px;" class="font-size">68</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="">
+                                                <div class="btn d-flex align-items-center border-top rounded-0">
+                                                    <img class="section-icon" height=20 src="/assets/images/webpage-editor/icons/text.png">
+                                                    <p class="panel-label" data-toggle="collapse" data-target="#collapseOneB">Description</p>
+                                                </div>
+                                                <div class="collapse panel-content" data-parent="#child1" id="collapseOneB">
+                                                    <p>Content:</p>
+                                                    <div class="input-group">
+                                                        <input type="text" class="text-value input-pink rounded-left" placeholder="Text">
+                                                        <div class="input-group-append">
+                                                            <button class="text-change btn btn-pink shadow-none rounded-right"><img height=18 src="/assets/images/webpage-editor/icons/checkmark-24.png"></button>
+                                                        </div>
+                                                    </div>
+                                                    <p>Styling:</p>
+                                                    <div class="d-flex styling-icons align-items-center">
+                                                        <img class="section-icon bold-btn" height=18 src="/assets/images/webpage-editor/icons/styling/bold.png">
+                                                        <img class="section-icon italic-btn" height=18 src="/assets/images/webpage-editor/icons/styling/italic.png">
+                                                        <img class="section-icon underline-btn" height=18 src="/assets/images/webpage-editor/icons/styling/underline.png">
+                                                        <label class="color-label section-icon text-center"><img height=18 src="/assets/images/webpage-editor/icons/styling/colour.png"><input style="display: none;" class="color-picker" type="color" value="#f5c0bc"></label>
+                                                        <label class="color-label section-icon text-center"><img height=20 src="/assets/images/webpage-editor/icons/styling/marker.png"><input style="display: none;" class="back-color-picker" type="color" value="#f5c0bc"></label>
+                                                        <img class="section-icon cancel-btn" height=19 src="/assets/images/webpage-editor/icons/styling/cancel.png">
+                                                    </div>
+                                                    <p>Font Size:</p>
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <input type="range" min="8" max="72" value="31" class="myslider" id="sliderRange">
+                                                        <p style="padding: 6px; margin: 0 6px 6px 6px;" class="font-size">31</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="">
+                                                <div class="btn d-flex align-items-center border-top rounded-0">
+                                                    <img class="section-icon" height=20 src="/assets/images/webpage-editor/icons/text.png">
+                                                    <p class="panel-label" data-toggle="collapse" data-target="#collapseOneC">Button</p>
+                                                </div>
+                                                <div class="collapse panel-content" data-parent="#child1" id="collapseOneC">
+                                                    <p>Content:</p>
+                                                    <div class="input-group">
+                                                        <input type="text" class="text-value input-pink rounded-left" placeholder="Text">
+                                                        <div class="input-group-append">
+                                                            <button class="text-change btn btn-pink shadow-none rounded-right"><img height=18 src="/assets/images/webpage-editor/icons/checkmark-24.png"></button>
+                                                        </div>
+                                                    </div>
+                                                    <p>Link:</p>
+                                                    <div class="input-group">
+                                                        <input type="text" class="link-value input-teal rounded-left" placeholder="URL">
+                                                        <div class="input-group-append">
+                                                            <button class="link-change btn btn-teal shadow-none rounded-right"><img height=18 src="/assets/images/webpage-editor/icons/checkmark-24.png"></button>
+                                                        </div>
+                                                    </div>
+                                                    <p>Styling:</p>
+                                                    <div class="d-flex styling-icons align-items-center">
+                                                        <img class="section-icon bold-btn" height=18 src="/assets/images/webpage-editor/icons/styling/bold.png">
+                                                        <img class="section-icon italic-btn" height=18 src="/assets/images/webpage-editor/icons/styling/italic.png">
+                                                        <img class="section-icon underline-btn" height=18 src="/assets/images/webpage-editor/icons/styling/underline.png">
+                                                        <label class="color-label section-icon text-center"><img height=18 src="/assets/images/webpage-editor/icons/styling/colour.png"><input style="display: none;" class="color-picker" type="color" value="#f5c0bc"></label>
+                                                        <label class="color-label section-icon text-center"><img height=20 src="/assets/images/webpage-editor/icons/styling/marker.png"><input style="display: none;" class="back-color-picker" type="color" value="#f5c0bc"></label>
+                                                        <img class="section-icon cancel-btn" height=19 src="/assets/images/webpage-editor/icons/styling/cancel.png">
+                                                    </div>
+                                                    <p>Font Size:</p>
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <input type="range" min="8" max="72" value="31" class="myslider" id="sliderRange">
+                                                        <p style="padding: 6px; margin: 0 6px 6px 6px;" class="font-size">31</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Text Panel -->
+                                <div>
+                                    <div class="panel-heading border-bottom border-top" id="headingTwo">
+                                        <div class="mb-0 d-inline d-flex justify-content-between align-items-center">
+                                        <div class="btn collapsed d-flex align-items-center" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            <img class="section-icon" height=25 src="/assets/images/webpage-editor/icons/header.png">
+                                                <p class="main-panel-label">Text Section</p>
+                                        </div>
+                                        <div class="mr-2">
+                                            <img class="btn section-settings" name="text-section" height=25 src="/assets/images/webpage-editor/icons/settings.png" data-toggle="modal" data-target="#settingsModalColor">
+                                            <img class="btn move-up" name="text-section" height=25 src="/assets/images/webpage-editor/icons/up-arrow(1).png">
+                                            <img class="btn move-down" name="text-section" height=25 src="/assets/images/webpage-editor/icons/down-arrow(1).png">
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse panel" aria-labelledby="headingTwo" data-parent="#accordion">
+                                        <div class="" id="child2">
+                                            <div class="">
+                                                <div class="btn d-flex align-items-center border-top rounded-0">
+                                                    <img class="section-icon" height=20 src="/assets/images/webpage-editor/icons/text.png">
+                                                    <p class="panel-label" data-toggle="collapse" data-target="#collapseTwoA">Text</p>
+                                                </div>
+                                                <div class="show collapse panel-content" data-parent="#child2" id="collapseTwoA">
+                                                    <p>Content:</p>
+                                                    <div class="input-group">
+                                                        <input type="text" class="text-value input-pink rounded-left" placeholder="Text">
+                                                        <div class="input-group-append">
+                                                            <button class="text-change btn btn-pink shadow-none rounded-right"><img height=18 src="/assets/images/webpage-editor/icons/checkmark-24.png"></button>
+                                                        </div>
+                                                    </div>
+                                                    <p>Styling:</p>
+                                                    <div class="d-flex styling-icons align-items-center">
+                                                        <img class="section-icon bold-btn" height=18 src="/assets/images/webpage-editor/icons/styling/bold.png">
+                                                        <img class="section-icon italic-btn" height=18 src="/assets/images/webpage-editor/icons/styling/italic.png">
+                                                        <img class="section-icon underline-btn" height=18 src="/assets/images/webpage-editor/icons/styling/underline.png">
+                                                        <label class="color-label section-icon text-center"><img height=18 src="/assets/images/webpage-editor/icons/styling/colour.png"><input style="display: none;" class="color-picker" type="color" value="#f5c0bc"></label>
+                                                        <label class="color-label section-icon text-center"><img height=20 src="/assets/images/webpage-editor/icons/styling/marker.png"><input style="display: none;" class="back-color-picker" type="color" value="#f5c0bc"></label>
+                                                        <img class="section-icon cancel-btn" height=19 src="/assets/images/webpage-editor/icons/styling/cancel.png">
+                                                    </div>
+                                                    <p>Font Size:</p>
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <input type="range" min="8" max="72" value="20" class="myslider" id="sliderRange">
+                                                        <p style="padding: 6px; margin: 0 6px 6px 6px;" class="font-size">20</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Product Panel -->
+                                <div>
+                                    <div class="panel-heading border-bottom border-top" id="headingThree">
+                                        <div class="mb-0 d-inline d-flex justify-content-between align-items-center">
+                                            <div class="btn d-flex align-items-center" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                                <img class="section-icon" height=25 src="/assets/images/webpage-editor/icons/header.png">
+                                                <p class="main-panel-label">Product Section</p>
+                                            </div>
+                                            <div class="mr-2">
+                                                <img class="btn section-settings" name="product-section" height=25 src="/assets/images/webpage-editor/icons/settings.png" data-toggle="modal" data-target="#settingsModalColor">
+                                                <img class="btn move-up" name="product-section" height=25 src="/assets/images/webpage-editor/icons/up-arrow(1).png">
+                                                <img class="btn move-down" name="product-section" height=25 src="/assets/images/webpage-editor/icons/down-arrow(1).png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="collapseThree" class="collapse border-bottom panel" aria-labelledby="headingThree" data-parent="#accordion">
+                                        <div class="" id="child3">
+                                            <div class="">
+                                                <div class="btn d-flex align-items-center border-top rounded-0">
+                                                    <img class="section-icon" height=20 src="/assets/images/webpage-editor/icons/text.png">
+                                                    <p class="panel-label" data-toggle="collapse" data-target="#collapseThreeA">Title</p>
+                                                </div>
+                                                <div class="collapse show panel-content" data-parent="#child3" id="collapseThreeA">
+                                                    <p>Content:</p>
+                                                    <div class="input-group">
+                                                        <input type="text" class="text-value input-pink rounded-left" placeholder="Text">
+                                                        <div class="input-group-append">
+                                                            <button class="text-change btn btn-pink shadow-none rounded-right"><img height=18 src="/assets/images/webpage-editor/icons/checkmark-24.png"></button>
+                                                        </div>
+                                                    </div>
+                                                    <p>Styling:</p>
+                                                    <div class="d-flex styling-icons align-items-center">
+                                                        <img class="section-icon bold-btn" height=18 src="/assets/images/webpage-editor/icons/styling/bold.png">
+                                                        <img class="section-icon italic-btn" height=18 src="/assets/images/webpage-editor/icons/styling/italic.png">
+                                                        <img class="section-icon underline-btn" height=18 src="/assets/images/webpage-editor/icons/styling/underline.png">
+                                                        <label class="color-label section-icon text-center"><img height=18 src="/assets/images/webpage-editor/icons/styling/colour.png"><input style="display: none;" class="color-picker" type="color" value="#f5c0bc"></label>
+                                                        <label class="color-label section-icon text-center"><img height=20 src="/assets/images/webpage-editor/icons/styling/marker.png"><input style="display: none;" class="back-color-picker" type="color" value="#f5c0bc"></label>
+                                                        <img class="section-icon cancel-btn" height=19 src="/assets/images/webpage-editor/icons/styling/cancel.png">
+                                                    </div>
+                                                    <p>Font Size:</p>
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <input type="range" min="8" max="72" value="48" class="myslider" id="sliderRange">
+                                                        <p style="padding: 6px; margin: 0 6px 6px 6px;" class="font-size">48</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="">
+                                                <div class="btn d-flex align-items-center border-top rounded-0">
+                                                    <img class="section-icon" height=20 src="/assets/images/webpage-editor/icons/text.png">
+                                                    <p class="panel-label" data-toggle="collapse" data-target="#collapseThreeB">Description</p>
+                                                </div>
+                                                <div class="collapse panel-content" data-parent="#child3" id="collapseThreeB">
+                                                    <p>Content:</p>
+                                                    <div class="input-group">
+                                                        <input type="text" class="text-value input-pink rounded-left" placeholder="Text">
+                                                        <div class="input-group-append">
+                                                            <button class="text-change btn btn-pink shadow-none rounded-right"><img height=18 src="/assets/images/webpage-editor/icons/checkmark-24.png"></button>
+                                                        </div>
+                                                    </div>
+                                                    <p>Styling:</p>
+                                                    <div class="d-flex styling-icons align-items-center">
+                                                        <img class="section-icon bold-btn" height=18 src="/assets/images/webpage-editor/icons/styling/bold.png">
+                                                        <img class="section-icon italic-btn" height=18 src="/assets/images/webpage-editor/icons/styling/italic.png">
+                                                        <img class="section-icon underline-btn" height=18 src="/assets/images/webpage-editor/icons/styling/underline.png">
+                                                        <label class="color-label section-icon text-center"><img height=18 src="/assets/images/webpage-editor/icons/styling/colour.png"><input style="display: none;" class="color-picker" type="color" value="#f5c0bc"></label>
+                                                        <label class="color-label section-icon text-center"><img height=20 src="/assets/images/webpage-editor/icons/styling/marker.png"><input style="display: none;" class="back-color-picker" type="color" value="#f5c0bc"></label>
+                                                        <img class="section-icon cancel-btn" height=19 src="/assets/images/webpage-editor/icons/styling/cancel.png">
+                                                    </div>
+                                                    <p>Font Size:</p>
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <input type="range" min="8" max="72" value="20" class="myslider" id="sliderRange">
+                                                        <p style="padding: 6px; margin: 0 6px 6px 6px;" class="font-size">20</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="">
+                                                <div class="btn d-flex align-items-center border-top rounded-0">
+                                                    <img class="section-icon" height=20 src="/assets/images/webpage-editor/icons/landscape.png">
+                                                    <p class="panel-label" data-toggle="collapse" data-target="#collapseThreeC">Product Image Row</p>
+                                                </div>
+                                                <div class="collapse panel-content" data-parent="#child3" id="collapseThreeC">
+                                                    <div class="d-flex align-items-center">
+                                                        <p class="mr-4 mb-0">Number of pictures:</p>
+                                                        <input type="number" class="form-control img-num" style="max-width: 90px;" value="3" min="1" max="3">
+                                                        <!--button class="btn border text-change">Update text</button-->
+                                                    </div>
+                                                    <div class="upload-row d-flex justify-content-center align-items-center mt-3 mb-4">
+                                                        <div class="upload-container text-center">
+                                                            <img src="/assets/images/webpage-editor/product-images/coffee1.jpg" class="upload-img mr-3">
+                                                            <label class="upload-icon ml-3" data-toggle="modal" data-target="#uploadModal">
+                                                                <img src="/assets/images/webpage-editor/icons/image-upload.png" height="22">Upload Image
+                                                            </label>
+                                                        </div>
+                                                        <div class="upload-container">
+                                                            <img src="/assets/images/webpage-editor/product-images/coffee2.jpg" class="upload-img mr-3">
+                                                            <label class="upload-icon ml-3" data-toggle="modal" data-target="#uploadModal">
+                                                                <img src="/assets/images/webpage-editor/icons/image-upload.png" height="22">Upload Image
+                                                            </label>
+                                                        </div>
+                                                        <div class="upload-container">
+                                                            <img src="/assets/images/webpage-editor/product-images/coffee3.jpg" class="upload-img">
+                                                            <label class="upload-icon ml-3" data-toggle="modal" data-target="#uploadModal">
+                                                                <img src="/assets/images/webpage-editor/icons/image-upload.png" height="22">Upload Image
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Second image row -->
+                                            <div class="">
+                                                <div class="btn d-flex align-items-center border-top rounded-0">
+                                                    <img class="section-icon" height=20 src="/assets/images/webpage-editor/icons/landscape.png">
+                                                    <p class="panel-label" data-toggle="collapse" data-target="#collapseThreeD">Product Image Row</p>
+                                                </div>
+                                                <div class="collapse panel-content" data-parent="#child3" id="collapseThreeD">
+                                                    <div class="d-flex align-items-center">
+                                                        <p class="mr-4 mb-0">Number of pictures:</p>
+                                                        <input type="number" class="form-control img-num" style="max-width: 90px;" value="2" min="1" max="3">
+                                                        <!--button class="btn border text-change">Update text</button-->
+                                                    </div>
+                                                    <div class="upload-row d-flex justify-content-center align-items-center text-center mt-3 mb-4">
+                                                        <div class="upload-container">
+                                                            <img src="/assets/images/webpage-editor/product-images/chocolate1.jpg" class="upload-img mr-3">
+                                                            <label class="upload-icon ml-3" data-toggle="modal" data-target="#uploadModal">
+                                                                <img src="/assets/images/webpage-editor/icons/image-upload.png" height="22">Upload Image
+                                                            </label>
+                                                        </div>
+                                                        <div class="upload-container">
+                                                            <img src="/assets/images/webpage-editor/product-images/chocolate2.jpg" class="upload-img mr-3">
+                                                            <label class="upload-icon ml-3" data-toggle="modal" data-target="#uploadModal">
+                                                                <img src="/assets/images/webpage-editor/icons/image-upload.png" height="22">Upload Image
+                                                            </label>
+                                                        </div>
+                                                        <div class="upload-container">
+                                                            <img src="/assets/images/webpage-editor/product-images/chocolate1.jpg" class="upload-img mr-3">
+                                                            <label class="upload-icon ml-3" data-toggle="modal" data-target="#uploadModal">
+                                                                <img src="/assets/images/webpage-editor/icons/image-upload.png" height="22">Upload Image
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Blog Panel -->
+                                <div>
+                                    <div class="panel-heading border-bottom border-top" id="headingFour">
+                                        <div class="mb-0  d-inline d-flex justify-content-between align-items-center">
+                                            <div class="btn d-flex align-items-center" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                                <img class="section-icon" height=25 src="/assets/images/webpage-editor/icons/header.png">
+                                                <p class="main-panel-label">Blog</p>
+                                            </div>
+                                            <div class="mr-2">
+                                                <img class="btn section-settings" name="blog-section" height=25 src="/assets/images/webpage-editor/icons/settings.png" data-toggle="modal" data-target="#settingsModalColor">
+                                                <img class="btn move-up" name="blog-section" height=25 src="/assets/images/webpage-editor/icons/up-arrow(1).png">
+                                                <img class="btn move-down" name="blog-section" height=25 src="/assets/images/webpage-editor/icons/down-arrow(1).png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="collapseFour" class="collapse border-bottom panel" aria-labelledby="headingFour" data-parent="#accordion">
+                                        <div class="" id="child4">
+                                            <div class="">
+                                                <div class="btn d-flex align-items-center border-top rounded-0">
+                                                    <img class="section-icon" height=20 src="/assets/images/webpage-editor/icons/text.png">
+                                                    <p class="panel-label" data-toggle="collapse" data-target="#collapseFourA">Title</p>
+                                                </div>
+                                                <div class="collapse show panel-content" data-parent="#child4" id="collapseFourA">
+                                                    <p>Content:</p>
+                                                    <div class="input-group">
+                                                        <input type="text" class="text-value input-pink rounded-left" placeholder="Text">
+                                                        <div class="input-group-append">
+                                                            <button class="text-change btn btn-pink shadow-none rounded-right"><img height=18 src="/assets/images/webpage-editor/icons/checkmark-24.png"></button>
+                                                        </div>
+                                                    </div>
+                                                    <p>Styling:</p>
+                                                    <div class="d-flex styling-icons align-items-center">
+                                                        <img class="section-icon bold-btn" height=18 src="/assets/images/webpage-editor/icons/styling/bold.png">
+                                                        <img class="section-icon italic-btn" height=18 src="/assets/images/webpage-editor/icons/styling/italic.png">
+                                                        <img class="section-icon underline-btn" height=18 src="/assets/images/webpage-editor/icons/styling/underline.png">
+                                                        <label class="color-label section-icon text-center"><img height=18 src="/assets/images/webpage-editor/icons/styling/colour.png"><input style="display: none;" class="color-picker" type="color" value="#f5c0bc"></label>
+                                                        <label class="color-label section-icon text-center"><img height=20 src="/assets/images/webpage-editor/icons/styling/marker.png"><input style="display: none;" class="back-color-picker" type="color" value="#f5c0bc"></label>
+                                                        <img class="section-icon cancel-btn" height=19 src="/assets/images/webpage-editor/icons/styling/cancel.png">
+                                                    </div>
+                                                    <p>Font Size:</p>
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <input type="range" min="8" max="72" value="56" class="myslider" id="sliderRange">
+                                                        <p style="padding: 6px; margin: 0 6px 6px 6px;" class="font-size">56</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="">
+                                                <div class="btn d-flex align-items-center border-top rounded-0">
+                                                    <img class="section-icon" height=23 src="/assets/images/webpage-editor/icons/header.png">
+                                                    <p class="panel-label" data-toggle="collapse" data-target="#collapseFourB">Blog Post</p>
+                                                </div>
+                                                <div class="collapse panel-content" data-parent="#child4" id="collapseFourB">
+                                                    <div class="" id="child4A">
+                                                        <div class="">
+                                                            <div class="btn d-flex align-items-center border-top rounded-0">
+                                                                <img class="section-icon" height=20 src="/assets/images/webpage-editor/icons/landscape.png">
+                                                                <p class="panel-label" data-toggle="collapse" data-target="#collapseFourBA">Blog Image</p>
+                                                            </div>
+                                                            <div class="collapse panel-content" data-parent="#child4A" id="collapseFourBA">
+                                                                <div class="upload-row d-flex justify-content-center align-items-center text-center mt-3 mb-4">
+                                                                    <div class="upload-container">
+                                                                        <img src="/assets/images/webpage-editor/macarons.jpg" class="upload-img mr-3">
+                                                                        <label class="upload-icon ml-3" data-toggle="modal" data-target="#uploadModal">
+                                                                            <img src="/assets/images/webpage-editor/icons/image-upload.png" height="22">Upload Image
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="">
+                                                            <div class="btn d-flex align-items-center border-top">
+                                                                <img class="section-icon" height=20 src="/assets/images/webpage-editor/icons/text.png">
+                                                                <p class="panel-label" data-toggle="collapse" data-target="#collapseFourBB">Title</p>
+                                                            </div>
+                                                            <div class="collapse panel-content" data-parent="#child4A" id="collapseFourBB">
+                                                                <p>Content:</p>
+                                                                <div class="input-group">
+                                                                    <input type="text" class="text-value input-pink rounded-left" placeholder="Text">
+                                                                    <div class="input-group-append">
+                                                                        <button class="text-change btn btn-pink shadow-none rounded-right"><img height=18 src="/assets/images/webpage-editor/icons/checkmark-24.png"></button>
+                                                                    </div>
+                                                                </div>
+                                                                <p>Styling:</p>
+                                                                <div class="d-flex styling-icons align-items-center">
+                                                                    <img class="section-icon bold-btn" height=18 src="/assets/images/webpage-editor/icons/styling/bold.png">
+                                                                    <img class="section-icon italic-btn" height=18 src="/assets/images/webpage-editor/icons/styling/italic.png">
+                                                                    <img class="section-icon underline-btn" height=18 src="/assets/images/webpage-editor/icons/styling/underline.png">
+                                                                    <label class="color-label section-icon text-center"><img height=18 src="/assets/images/webpage-editor/icons/styling/colour.png"><input style="display: none;" class="color-picker" type="color" value="#f5c0bc"></label>
+                                                                    <label class="color-label section-icon text-center"><img height=20 src="/assets/images/webpage-editor/icons/styling/marker.png"><input style="display: none;" class="back-color-picker" type="color" value="#f5c0bc"></label>
+                                                                    <img class="section-icon cancel-btn" height=19 src="/assets/images/webpage-editor/icons/styling/cancel.png">
+                                                                </div>
+                                                                <p>Font Size:</p>
+                                                                <div class="d-flex align-items-center justify-content-between">
+                                                                    <input type="range" min="8" max="72" value="38" class="myslider" id="sliderRange">
+                                                                    <p style="padding: 6px; margin: 0 6px 6px 6px;" class="font-size">38</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="">
+                                                            <div class="btn d-flex align-items-center border-top rounded-0">
+                                                                <img class="section-icon" height=20 src="/assets/images/webpage-editor/icons/text.png">
+                                                                <p class="panel-label" data-toggle="collapse" data-target="#collapseFourBC">Description</p>
+                                                            </div>
+                                                            <div class="collapse panel-content" data-parent="#child4A" id="collapseFourBC">
+                                                                <p>Content:</p>
+                                                                <div class="input-group">
+                                                                    <input type="text" class="text-value input-pink rounded-left" placeholder="Text">
+                                                                    <div class="input-group-append">
+                                                                        <button class="text-change btn btn-pink shadow-none rounded-right"><img height=18 src="/assets/images/webpage-editor/icons/checkmark-24.png"></button>
+                                                                    </div>
+                                                                </div>
+                                                                <p>Styling:</p>
+                                                                <div class="d-flex styling-icons align-items-center">
+                                                                    <img class="section-icon bold-btn" height=18 src="/assets/images/webpage-editor/icons/styling/bold.png">
+                                                                    <img class="section-icon italic-btn" height=18 src="/assets/images/webpage-editor/icons/styling/italic.png">
+                                                                    <img class="section-icon underline-btn" height=18 src="/assets/images/webpage-editor/icons/styling/underline.png">
+                                                                    <label class="color-label section-icon text-center"><img height=18 src="/assets/images/webpage-editor/icons/styling/colour.png"><input style="display: none;" class="color-picker" type="color" value="#f5c0bc"></label>
+                                                                    <label class="color-label section-icon text-center"><img height=20 src="/assets/images/webpage-editor/icons/styling/marker.png"><input style="display: none;" class="back-color-picker" type="color" value="#f5c0bc"></label>
+                                                                    <img class="section-icon cancel-btn" height=19 src="/assets/images/webpage-editor/icons/styling/cancel.png">
+                                                                </div>
+                                                                <p>Font Size:</p>
+                                                                <div class="d-flex align-items-center justify-content-between">
+                                                                    <input type="range" min="8" max="72" value="20" class="myslider" id="sliderRange">
+                                                                    <p style="padding: 6px; margin: 0 6px 6px 6px;" class="font-size">20</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="">
+                                                            <div class="btn d-flex align-items-center border-top rounded-0">
+                                                                <img class="section-icon" height=20 src="/assets/images/webpage-editor/icons/text.png">
+                                                                <p class="panel-label" data-toggle="collapse" data-target="#collapseFourBD">Link</p>
+                                                            </div>
+                                                            <div class="collapse panel-content" data-parent="#child4A" id="collapseFourBD">
+                                                                <p>Content:</p>
+                                                                <div class="input-group">
+                                                                    <input type="text" class="text-value input-pink rounded-left" placeholder="Text">
+                                                                    <div class="input-group-append">
+                                                                        <button class="text-change btn btn-pink shadow-none rounded-right"><img height=18 src="/assets/images/webpage-editor/icons/checkmark-24.png"></button>
+                                                                    </div>
+                                                                </div>
+                                                                <p>Link:</p>
+                                                                <div class="input-group">
+                                                                    <input type="text" class="link-value input-teal rounded-left" placeholder="URL">
+                                                                    <div class="input-group-append">
+                                                                        <button class="link-change btn btn-teal shadow-none rounded-right"><img height=18 src="/assets/images/webpage-editor/icons/checkmark-24.png"></button>
+                                                                    </div>
+                                                                </div>
+                                                                <p>Styling:</p>
+                                                                <div class="d-flex styling-icons align-items-center">
+                                                                    <img class="section-icon bold-btn" height=18 src="/assets/images/webpage-editor/icons/styling/bold.png">
+                                                                    <img class="section-icon italic-btn" height=18 src="/assets/images/webpage-editor/icons/styling/italic.png">
+                                                                    <img class="section-icon underline-btn" height=18 src="/assets/images/webpage-editor/icons/styling/underline.png">
+                                                                    <label class="color-label section-icon text-center"><img height=18 src="/assets/images/webpage-editor/icons/styling/colour.png"><input style="display: none;" class="color-picker" type="color" value="#f5c0bc"></label>
+                                                                    <label class="color-label section-icon text-center"><img height=20 src="/assets/images/webpage-editor/icons/styling/marker.png"><input style="display: none;" class="back-color-picker" type="color" value="#f5c0bc"></label>
+                                                                    <img class="section-icon cancel-btn" height=19 src="/assets/images/webpage-editor/icons/styling/cancel.png">
+                                                                </div>
+                                                                <p>Font Size:</p>
+                                                                <div class="d-flex align-items-center justify-content-between">
+                                                                    <input type="range" min="8" max="72" value="22" class="myslider" id="sliderRange">
+                                                                    <p style="padding: 6px; margin: 0 6px 6px 6px;" class="font-size">22</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="">
+                                                <div class="btn d-flex align-items-center border-top rounded-0">
+                                                    <img class="section-icon" height=23 src="/assets/images/webpage-editor/icons/header.png">
+                                                    <p class="panel-label" data-toggle="collapse" data-target="#collapseFourC">Blog Post</p>
+                                                </div>
+                                                <div class="collapse panel-content" data-parent="#child4" id="collapseFourC">
+                                                    <div class="" id="child4B">
+                                                        <div class="">
+                                                            <div class="btn d-flex align-items-center border-top rounded-0">
+                                                                <img class="section-icon" height=20 src="/assets/images/webpage-editor/icons/landscape.png">
+                                                                <p class="panel-label" data-toggle="collapse" data-target="#collapseFourCA">Blog Image</p>
+                                                            </div>
+                                                            <div class="collapse panel-content" data-parent="#child4B" id="collapseFourCA">
+                                                                <div class="upload-row d-flex justify-content-center align-items-center text-center mt-3 mb-4">
+                                                                    <div class="upload-container">
+                                                                        <img src="/assets/images/webpage-editor/strawberry-shortcake.jpg" class="upload-img mr-3">
+                                                                        <label class="upload-icon ml-3" data-toggle="modal" data-target="#uploadModal">
+                                                                            <img src="/assets/images/webpage-editor/icons/image-upload.png" height="22">Upload Image
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="">
+                                                            <div class="btn d-flex align-items-center border-top">
+                                                                <img class="section-icon" height=20 src="/assets/images/webpage-editor/icons/text.png">
+                                                                <p class="panel-label" data-toggle="collapse" data-target="#collapseFourCB">Title</p>
+                                                            </div>
+                                                            <div class="collapse panel-content" data-parent="#child4B" id="collapseFourCB">
+                                                                <p>Content:</p>
+                                                                <div class="input-group">
+                                                                    <input type="text" class="text-value input-pink rounded-left" placeholder="Text">
+                                                                    <div class="input-group-append">
+                                                                        <button class="text-change btn btn-pink shadow-none rounded-right"><img height=18 src="/assets/images/webpage-editor/icons/checkmark-24.png"></button>
+                                                                    </div>
+                                                                </div>
+                                                                <p>Styling:</p>
+                                                                <div class="d-flex styling-icons align-items-center">
+                                                                    <img class="section-icon bold-btn" height=18 src="/assets/images/webpage-editor/icons/styling/bold.png">
+                                                                    <img class="section-icon italic-btn" height=18 src="/assets/images/webpage-editor/icons/styling/italic.png">
+                                                                    <img class="section-icon underline-btn" height=18 src="/assets/images/webpage-editor/icons/styling/underline.png">
+                                                                    <label class="color-label section-icon text-center"><img height=18 src="/assets/images/webpage-editor/icons/styling/colour.png"><input style="display: none;" class="color-picker" type="color" value="#f5c0bc"></label>
+                                                                    <label class="color-label section-icon text-center"><img height=20 src="/assets/images/webpage-editor/icons/styling/marker.png"><input style="display: none;" class="back-color-picker" type="color" value="#f5c0bc"></label>
+                                                                    <img class="section-icon cancel-btn" height=19 src="/assets/images/webpage-editor/icons/styling/cancel.png">
+                                                                </div>
+                                                                <p>Font Size:</p>
+                                                                <div class="d-flex align-items-center justify-content-between">
+                                                                    <input type="range" min="8" max="72" value="38" class="myslider" id="sliderRange">
+                                                                    <p style="padding: 6px; margin: 0 6px 6px 6px;" class="font-size">38</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="">
+                                                            <div class="btn d-flex align-items-center border-top rounded-0">
+                                                                <img class="section-icon" height=20 src="/assets/images/webpage-editor/icons/text.png">
+                                                                <p class="panel-label" data-toggle="collapse" data-target="#collapseFourCC">Description</p>
+                                                            </div>
+                                                            <div class="collapse panel-content" data-parent="#child4B" id="collapseFourCC">
+                                                                <p>Content:</p>
+                                                                <div class="input-group">
+                                                                    <input type="text" class="text-value input-pink rounded-left" placeholder="Text">
+                                                                    <div class="input-group-append">
+                                                                        <button class="text-change btn btn-pink shadow-none rounded-right"><img height=18 src="/assets/images/webpage-editor/icons/checkmark-24.png"></button>
+                                                                    </div>
+                                                                </div>
+                                                                <p>Styling:</p>
+                                                                <div class="d-flex styling-icons align-items-center">
+                                                                    <img class="section-icon bold-btn" height=18 src="/assets/images/webpage-editor/icons/styling/bold.png">
+                                                                    <img class="section-icon italic-btn" height=18 src="/assets/images/webpage-editor/icons/styling/italic.png">
+                                                                    <img class="section-icon underline-btn" height=18 src="/assets/images/webpage-editor/icons/styling/underline.png">
+                                                                    <label class="color-label section-icon text-center"><img height=18 src="/assets/images/webpage-editor/icons/styling/colour.png"><input style="display: none;" class="color-picker" type="color" value="#f5c0bc"></label>
+                                                                    <label class="color-label section-icon text-center"><img height=20 src="/assets/images/webpage-editor/icons/styling/marker.png"><input style="display: none;" class="back-color-picker" type="color" value="#f5c0bc"></label>
+                                                                    <img class="section-icon cancel-btn" height=19 src="/assets/images/webpage-editor/icons/styling/cancel.png">
+                                                                </div>
+                                                                <p>Font Size:</p>
+                                                                <div class="d-flex align-items-center justify-content-between">
+                                                                    <input type="range" min="8" max="72" value="20" class="myslider" id="sliderRange">
+                                                                    <p style="padding: 6px; margin: 0 6px 6px 6px;" class="font-size">20</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="">
+                                                            <div class="btn d-flex align-items-center border-top rounded-0">
+                                                                <img class="section-icon" height=20 src="/assets/images/webpage-editor/icons/text.png">
+                                                                <p class="panel-label" data-toggle="collapse" data-target="#collapseFourCD">Link</p>
+                                                            </div>
+                                                            <div class="collapse panel-content" data-parent="#child4B" id="collapseFourCD">
+                                                                <p>Content:</p>
+                                                                <div class="input-group">
+                                                                    <input type="text" class="text-value input-pink rounded-left" placeholder="Text">
+                                                                    <div class="input-group-append">
+                                                                        <button class="text-change btn btn-pink shadow-none rounded-right"><img height=18 src="/assets/images/webpage-editor/icons/checkmark-24.png"></button>
+                                                                    </div>
+                                                                </div>
+                                                                <p>Link:</p>
+                                                                <div class="input-group">
+                                                                    <input type="text" class="link-value input-teal rounded-left" placeholder="URL">
+                                                                    <div class="input-group-append">
+                                                                        <button class="link-change btn btn-teal shadow-none rounded-right"><img height=18 src="/assets/images/webpage-editor/icons/checkmark-24.png"></button>
+                                                                    </div>
+                                                                </div>
+                                                                <p>Styling:</p>
+                                                                <div class="d-flex styling-icons align-items-center">
+                                                                    <img class="section-icon bold-btn" height=18 src="/assets/images/webpage-editor/icons/styling/bold.png">
+                                                                    <img class="section-icon italic-btn" height=18 src="/assets/images/webpage-editor/icons/styling/italic.png">
+                                                                    <img class="section-icon underline-btn" height=18 src="/assets/images/webpage-editor/icons/styling/underline.png">
+                                                                    <label class="color-label section-icon text-center"><img height=18 src="/assets/images/webpage-editor/icons/styling/colour.png"><input style="display: none;" class="color-picker" type="color" value="#f5c0bc"></label>
+                                                                    <label class="color-label section-icon text-center"><img height=20 src="/assets/images/webpage-editor/icons/styling/marker.png"><input style="display: none;" class="back-color-picker" type="color" value="#f5c0bc"></label>
+                                                                    <img class="section-icon cancel-btn" height=19 src="/assets/images/webpage-editor/icons/styling/cancel.png">
+                                                                </div>
+                                                                <p>Font Size:</p>
+                                                                <div class="d-flex align-items-center justify-content-between">
+                                                                    <input type="range" min="8" max="72" value="22" class="myslider" id="sliderRange">
+                                                                    <p style="padding: 6px; margin: 0 6px 6px 6px;" class="font-size">22</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+
+                                <!-- Modal for uploading images -->
+                                <div class="modal fade" id="uploadModal" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog modal-dialog-centered" id="uploadImageModalContainer" role="document">
+                                        <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Upload Image</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body" id="modal-upload-body">
+                                            <p>Enter the URL of the new image:</p>
+                                            <input id="image-input" placeholder="Image URL" type="text">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <button type="button" id="change-image" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Modal for changing header section image -->
+                                <div class="modal fade" id="settingsModal" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog modal-dialog-centered" id="upload-section-image">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                            <h5 class="modal-title" id="">Section Settings</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                            </div>
+                                            <div class="modal-body" id="upload-section-image-body">
+                                                <p>Enter the new background image URL:</p>
+                                                <div id="background-image-input">
+                                                    <input type="text" placeholder="Image URL" id="update-header-image-input">
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary" id="update-header-image" data-dismiss="modal">Save changes</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Modal for changing section background colour -->
+                                <div class="modal fade" id="settingsModalColor" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog modal-dialog-centered" id="upload-section-image">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                            <h5 class="modal-title" id="">Section Settings</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                            </div>
+                                            <div class="modal-body d-flex align-items-center" id="upload-section-color-body">
+                                                <p>Click the icon to select a new background colour:</p>
+                                                <div id="background-image-input">
+                                                    <label class="background-color-label section-icon text-center">
+                                                        <img height=50 src="/assets/images/webpage-editor/icons/color-picker.png"><input style="display: none;" id="section-background-color-picker" type="color" value="#f5c0bc">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary" id="update-section-color" data-dismiss="modal">Save changes</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Preview -->
+                <div class="col-md-9 p-0">
+                    <div id="preview">
+                        <!-- Preview Menu Bar -->
+                        <div class="d-flex justify-content-between align-items-center" id="right-menu">
+                            <div id="page-name">
+                                <p>Page Preview</p>
+                            </div>
+                            <div>
+                                <a class="btn menu-btn" id="preview-btn">View Page</a>
+                                <a type="button" class="btn menu-btn" id="export-btn" data-toggle="modal" data-target="#codeModal">Export Code</a>
+                                
+                                <!-- Export Modal -->
+                                <div class="modal fade" id="codeModal" tabindex="-1" role="dialog" aria-labelledby="codeModal" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" id="modal-container" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLongTitle">Export Code</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body" id="export-modal-body">
+                                                <div class="d-flex justify-content-between">
+                                                    <p id="export-label">Copy and paste the HTML below:</p>
+                                                    <p><button id="copy-html" class="btn">Copy to Clipboard</button></p>
+                                                </div>
+                                                <pre><textarea id="html-code" readonly></textarea></pre>
+                                                <p id="copy-message"></p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal" id="dismiss-export">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Site Preview -->
+                        <div class="container-fluid border border-top-0" id="section-container">
+                            <div class="row" id="header-section">
+                                <div class="col-12 p-0" id="header">
+                                    <div class="transbox d-flex flex-column justify-content-center align-items-center text-center">
+                                        <h3 class="text-elem" id="header-title">Website Title</h3>
+                                        <p class="my-2 text-elem" id="header-desc">Website description should go here. Lorem Ipsum.</p>
+                                        <a class="btn text-elem link-elem shadow-none" id="header-btn" target="_blank">Start Today →</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="text-section">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12 text-section text-center">
+                                            <p style="padding-bottom: 0; display: table; margin-left: auto; margin-right: auto;" class="text-elem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="product-section">
+                                <div class="container" style="padding-bottom: 25px;">
+                                    <div class="row">
+                                        <div class="col-12 text-center">
+                                            <p id="product-title" class="text-elem">Coffee & Chocolate</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 text-center">
+                                            <p id="product-desc" class="text-elem">Something something something something something goes here...</p>
+                                        </div>
+                                    </div>
+                                    <div class="row d-flex product-images justify-content-center">
+                                        <img class="col-md-4 col-10 img-fluid page-img" src="https://emilyanas2323.github.io/assets/images/webpage-editor/product-images/coffee1.jpg">
+                                        <img class="col-md-4 col-10 img-fluid page-img" src="https://emilyanas2323.github.io/assets/images/webpage-editor/product-images/coffee2.jpg">
+                                        <img class="col-md-4 col-10 img-fluid page-img" src="https://emilyanas2323.github.io/assets/images/webpage-editor/product-images/coffee3.jpg">
+                                    </div>
+                                    <div class="row d-flex product-images justify-content-center">
+                                        <img class="col-md-5 col-10 img-fluid page-img" src="https://emilyanas2323.github.io/assets/images/webpage-editor/product-images/chocolate1.jpg">
+                                        <img class="col-md-5 col-10 img-fluid page-img" src="https://emilyanas2323.github.io/assets/images/webpage-editor/product-images/chocolate2.jpg">
+                                        <img class="col-md-4 col-10 img-fluid page-img" src="https://emilyanas2323.github.io/assets/images/webpage-editor/product-images/chocolate1.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="blog-section">
+                                <div class="row">
+                                    <div class="col-12 jumbotron text-center" id="blog-banner">
+                                        <p class="text-elem">Sweets Blog</p>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="row d-flex align-items-center justify-content-center" id="blog-preview">
+                                        <div class="col-lg-5 col-md-9 col-10 align-right blog-left blog-img">
+                                            <img class="page-img img-fluid" src="https://emilyanas2323.github.io/assets/images/webpage-editor/macarons.jpg" height=350>
+                                        </div>
+                                        <div class="col-lg-5 col-md-9 col-11 blog-right">
+                                            <div>
+                                                <p class="blog-title text-elem">Sweets recipe</p>
+                                                <p class="blog-desc text-elem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                                <a class="blog-link text-elem link-elem" href="#" target="_blank">Read more →</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="row d-flex align-items-center justify-content-center" id="blog-preview">
+                                        <div class="col-lg-5 col-md-9 col-10 align-left blog-right order-lg-last blog-img">
+                                            <img class="page-img img-fluid" src="https://emilyanas2323.github.io/assets/images/webpage-editor/strawberry-shortcake.jpg" height=350>
+                                        </div>
+                                        <div class="col-lg-5 col-md-9 col-11 align-right blog-left">
+                                            <div>
+                                                <p class="blog-title text-elem">Sweets recipe</p>
+                                                <p class="blog-desc text-elem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                                <a class="blog-link text-elem link-elem" href="#" target="_blank">Read more →</a>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

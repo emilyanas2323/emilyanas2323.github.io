@@ -139,12 +139,12 @@ var physics = (function () {
 
 
 var game = (function () {
-	var _gameFieldHeight = 340;
-	var _gameFieldWidth = 450;
+	var _gameFieldHeight = 300;
+	var _gameFieldWidth = 405;
     var _entities = [];
 
     function _start() {
-        _entities.push(new cat(Math.floor(Math.random() * (_gameFieldWidth - catWidth)), Math.floor(Math.random() * (_gameFieldHeight - catHeight)),1,1));
+		_entities.push(new cat(Math.floor(Math.random() * (_gameFieldWidth - catWidth)), Math.floor(Math.random() * (_gameFieldHeight - catHeight)),1,1));
 
         window.requestAnimationFrame(this.update.bind(this));
     }
@@ -239,5 +239,7 @@ var game = (function () {
 
 })();
 
+window.onload = function(e){ 
+	game.start();
+};
 
-game.start();

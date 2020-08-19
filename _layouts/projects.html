@@ -10,49 +10,78 @@ layout: default
         </div>
     </div>
     <div class="container d-flex flex-column align-items-center" id="project-container">
-        <div class="row project-card mx-1">
+        <div class="row project-card mx-1 d-flex align-items-center">
             <div class="col-lg-6 col-12 order-last order-lg-first d-flex align-items-center">
                 <div class="project-content">
                     <p class="project-title">Website Editor</p>
                     <hr class="title-underline">
-                    <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <p><a href="file:///C:/Users/emily/Desktop/Website Editor/index.html" class="project-btn">View Project →</a></p>
+                    <p class="project-description">
+                        I designed a <a href="https://www.figma.com/file/K2LdgkOFH8exIUNnAFZTBk/Website-Editor-Design" target="_blank">user interface</a> and <a href="https://www.figma.com/file/uSdEEn8hzSf6Z2IhfTNGYf/Website-Editor-Theme-Design" target="_blank">sample website theme</a> using Figma and implemented a Webpage Editor using HTML, CSS, JavaScript, and jQuery. The Editor allows the user to design webpage sections without any coding experience, preview the page in a new tab, and export the HTML code.
+                    </p>
+                    <p><a href="/webpage-editor/" class="project-btn" target="_blank">View Project →</a></p>
                 </div>
             </div>
-            <div class="col-lg-6 col-12 order-first order-lg-last project-img text-center">
-                <video autoplay loop class="embed-responsive project-video">
-                    <source src="/assets/editor-preview.mp4" type="video/mp4" />
+            <div class="col-lg-6 col-12 order-first order-lg-last text-center">
+                <video autoplay muted loop class="embed-responsive project-video">
+                    <source src="/assets/videos/editor-preview.mp4" type="video/mp4" />
+                    <source src="/assets/videos/editor-preview.webm" type="video/webm" />
+                    <source src="/assets/videos/editor-preview.ogv" type="video/ogg" />
                 </video>
             </div>
         </div>
-        <div class="row project-card mx-2">
+        <div class="row project-card mx-1 d-flex align-items-center">
+            <div class="col-lg-6 col-12 order-last order-lg-first d-flex align-items-center">
+                <div class="project-content">
+                    <p class="project-title">Connect Four</p>
+                    <hr class="title-underline">
+                    <p class="project-description">
+                        This is the first project I made using React components! I thought it would be fun to make a small game to gain a better understanding of React and learn more about topics such as props, state, and event handling.
+                    </p>
+                    <p><a href="/react-game/" class="project-btn" target="_blank">View Project →</a></p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-12 order-first order-lg-last text-center">
+                <video autoplay muted loop class="embed-responsive project-video">
+                    <source src="/assets/videos/connect-four.mp4" type="video/mp4" />
+                    <source src="/assets/videos/connect-four.webm" type="video/webm" />
+                    <source src="/assets/videos/connect-four.ogv" type="video/ogg" />
+                </video>
+            </div>
+        </div>
+        <div class="row project-card mx-2 d-flex align-items-center">
+            <div class="col-lg-6 col-12 order-last order-lg-first d-flex align-items-center">
+                <div class="project-content">
+                    <p class="project-title">The Reheart Edit</p>
+                    <hr class="title-underline">
+                    <p class="project-description">
+                        When I worked as a Front-End Web Developer at <a href="https://reheart.ca/" target="_blank">Reheart</a>, I created their blog's landing page. Instead of hosting Reheart's blog on a separate blogging platform, I implemented this custom page which allowed Reheart to organize their blog posts more creatively.
+                    </p>
+                    <p><a href="https://reheart.ca/blogs/the-reheart-edit" class="project-btn" target="_blank">View Project →</a></p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-12 order-first order-lg-last text-center">
+                <video autoplay muted loop class="embed-responsive project-video">
+                    <source src="/assets/videos/reheart-edit.mp4" type="video/mp4" />
+                    <source src="/assets/videos/reheart-edit.webm" type="video/webm" />
+                    <source src="/assets/videos/reheart-edit.ogv" type="video/ogg" />
+                </video>
+            </div>
+        </div>
+        <!--div class="row project-card mx-2 d-flex align-items-center">
             <div class="col-lg-6 col-12 order-last order-lg-first d-flex align-items-center">
                 <div class="project-content">
                     <p class="project-title">Cat Generator</p>
                     <hr class="title-underline">
-                    <p class="project-description">Try clicking the spawn button on the right!<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <p><a href="/cat-generator/" class="project-btn">View Project →</a></p>
+                    <p class="project-description">
+                        I created a Cat Generator widget using HTML, CSS, Bootstrap, and JavaScript. The widget allows the user to spawn or destroy cats and control settings such as speed, background, and type of cat. It was inspired by a similar project I made in high school using Java Swing.
+                    </p>
+                    <p><a href="/cat-generator/" class="project-btn" target="_blank">View Project →</a></p>
                 </div>
             </div>
-            <div class="col-lg-6 col-12 order-first order-lg-last project-img text-center img-responsive">
+            <div class="col-lg-6 col-12 order-first order-lg-last text-center img-responsive">
                 {% include cat-generator.inc %}
             </div>
-        </div>
-        <div class="row project-card mx-2">
-            <div class="col-lg-6 col-12 order-last order-lg-first d-flex align-items-center">
-                <div class="project-content">
-                    <p class="project-title">Sample Website</p>
-                    <hr class="title-underline">
-                    <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <p><a href="" class="project-btn">View Project →</a></p>
-                </div>
-            </div>
-            <div class="col-lg-6 col-12 order-first order-lg-last project-img text-center">
-                <video autoplay loop class="embed-responsive" style="margin: 20px 0; border: 1px solid #c4c4c4;">
-                    <source src="/assets/sample-website.mp4" type="video/mp4" />
-                </video>
-            </div>
-        </div>
+        </div-->
     </div>
 </div>
     

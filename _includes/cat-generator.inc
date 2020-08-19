@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-12 text-center" style="margin: 15px 0;">
-            <canvas id="game-layer" width="450" height="340"></canvas>
+            <canvas id="game-layer" width="405" height="300"></canvas>
             <div class="col-12 text-center btn-container">
                 <div id="spawn" class="btn">Spawn</div>
                 <div id="destroy" class="btn">Destroy</div>
@@ -10,7 +10,7 @@
     </div>
 </div>
 
-<script src="/assets/js/game-preview.js"></script>
+<script src="/assets/js/cat-generator/game-preview.js"></script>
 
 <style>
 	p {

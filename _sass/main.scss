@@ -1,13 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
-/*
-'Open Sans', sans-serif;
-'Roboto Slab', serif;
-*/
-
 body {
     overflow-y: scroll;
+}
+
+textarea:focus, input:focus {
+    outline: none;
+}
+
+.modal-open {
+    overflow-y: scroll !important;
+    padding-right: 0 !important;
 }
 
 /* Navbar */
@@ -43,6 +47,41 @@ body {
 #nav-divider {
     margin: 0;
     border: 2px solid rgba(245, 106, 106, 0.6);
+}
+
+#attribution-link > a {
+    color: #c2bebe;
+}
+
+#attribution-link > a:hover {
+    color: rgba(0,0,0,.5);
+    cursor: pointer;
+}
+
+.close:focus {
+    outline: none;
+}
+
+#modal-container {
+    max-width: 600px;
+}
+
+.modal-body > p {
+    margin-bottom: 5px;
+}
+
+.modal-body > .modal-body-title {
+    margin-top: 20px;
+    font-size: 1.12rem;
+}
+
+.modal-body > .modal-body-title:first-of-type {
+    margin-top: 0;
+}
+
+.modal-title {
+    font-family: 'Roboto Slab', serif;
+    font-size: 22px;
 }
 
 @media (max-width: 768px) {
@@ -83,7 +122,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     color: rgba(245, 106, 106, 0.6);
     font-size: 17px;
-    border: 2px solid rgba(245, 106, 106, 0.6);
+    border: 1.75px solid rgba(245, 106, 106, 0.6);
     padding: 7px 12px;
     border-radius: 3px;
     outline: none;
@@ -100,19 +139,6 @@ body {
 #home-img {
     border-radius: 5px;
     max-height: 550px;
-}
-
-.overlay {
-    position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: #008CBA;
 }
 
 #home-divider {
@@ -157,11 +183,11 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    height: 56vh;
+    height: 54vh;
 }
 
 #project-header {
-    background-image: url("/assets/images/donovan-valdivia-qZMf--caObE-unsplash.jpg");
+    background-image: url("/assets/images/natanja-grun-X2s8GhnQmds-unsplash\(1\).jpg");
     padding: 0;
 }
 
@@ -184,13 +210,17 @@ body {
 .project-card {
     background-color: white;
     margin-bottom: 45px;
-    padding: 15px 30px 15px 30px;
+    padding: 30px;
     border: 1px solid rgba(194, 194, 194, 0.4);
     border-radius: 3px;
 }
 
+/*.project-card:last-of-type {
+    padding: 5px 30px;
+}*/
+
 .project-card:first-child {
-    margin-top: 50px;
+    margin-top: 60px;
 }
 
 .project-title {
@@ -203,6 +233,14 @@ body {
     padding-bottom: 18px;
 }
 
+.project-description > a, .modal-body > p > a {
+    color: rgba(245, 106, 106, 0.5);
+}
+
+.project-description > a:hover {
+    color: rgba(245, 106, 106, 0.5);
+}
+
 .title-underline {
     border: 2px solid rgba(245, 106, 106, 0.5);
     width: 80%;
@@ -211,18 +249,13 @@ body {
     margin-bottom: 30px;
 }
 
-.project-card > .project-img {
-    padding: 0;
-    /*background-color: #d1d1d1;*/
-}
-
-.project-img > img {
-    max-height: 400px;
+.project-video {
+    max-height: 300px;
 }
 
 @media (max-width: 992px) { 
     .project-card {
-        padding: 0px 25px 25px;
+        padding: 25px;
         max-width: 525px;
     }
 
@@ -233,7 +266,7 @@ body {
 
 @media (max-width: 768px) { 
     .header {
-        height: 40vh;
+        height: 35vh;
     }
 
     .page-title {
@@ -242,7 +275,7 @@ body {
 
     .project-card {
         margin-bottom: 32px;
-        padding: 0 15px 15px;
+        padding: 25px 15px 15px;
     }
 
     .project-card:first-child {
@@ -270,7 +303,7 @@ body {
 
 /* Experience */
 #work-banner {
-    height: 56vh;
+    height: 54vh;
     background-color: rgba(245, 106, 106, 0.4);;
 }
 
@@ -333,7 +366,7 @@ body {
 
 @media (max-width: 768px) { 
     #work-banner {
-        height: 40vh;
+        height: 35vh;
     }
 
     #experience-row {
@@ -363,14 +396,14 @@ body {
 
 /* Contact */
 #contact-header {
-    background-image: url("/assets/images/natanja-grun-X2s8GhnQmds-unsplash\(1\).jpg");
+    background-image: url("/assets/images/donovan-valdivia-qZMf--caObE-unsplash.jpg");
     padding: 0;
 }
 
 #contact-card {
     border: 1px solid #C2C2C2;
     border-radius: 5px;
-    margin: 70px 0;
+    margin: 60px 0;
     padding: 40px 60px;
     font-family: 'Open Sans', sans-serif;
 }
