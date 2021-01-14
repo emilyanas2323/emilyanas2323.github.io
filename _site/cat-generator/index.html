@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="/assets/css/styles.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+        <title>Cat Generator</title>
+    </head>
+    <nav id="site-nav" class="navbar navbar-expand-md sticky-top navbar-light ">
+    <a class="navbar-brand" href="/" id="nav-brand">Emily Anas</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/projects/">Projects</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/experience/">Experience</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/contact/">Contact</a>
+            </li>
+            <li class="nav-item" id="attribution-link">
+                <a class="nav-link" data-toggle="modal" data-target="#attributionModal">Attribution</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Attribution Modal -->
+<div class="modal fade" id="attributionModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-centered" id="modal-container" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title text-centre" id="exampleModalCenterTitle">Attribution</p>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-body-title">Photos</p>
+        <p>Taken by <a href="https://unsplash.com/@esteejanssens" target="_blank">Estée Janssens</a>, <a href="https://unsplash.com/@donovan_valdivia" target="_blank">Donovan Valdivia</a>, and <a href="https://unsplash.com/@natanja" target="_blank">Natanja Grün</a> on <a href="https://unsplash.com/" target="_blank">Unsplash</a>.</p>
+        <p class="modal-body-title">Icons</p>
+        <p>Made by <a href="https://www.flaticon.com/authors/freepik" target="_blank">Freepik</a> and <a href="https://www.flaticon.com/authors/pixel-perfect" target="_blank">Pixel perfect</a> from <a href="http://www.flaticon.com/" target="_blank">www.flaticon.com</a>.</p>
+        <p class="modal-body-title">Website</p>
+        <p>Designed and developed by Emily Anas.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <body > 
+        <!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<head>
+		<title>Cat Generator</title>		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<!--<link rel="stylesheet" type="text/css" href="wstyle.css" />-->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+	</head>
+	<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<h1 class="title">Cat Generator</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 text-center">
+				<canvas id="game-layer" width="500" height="500"></canvas>
+			</div>
+			<div class="col-md-6 control-panel">
+				<p class="control-title text-center">Control Panel</p>
+				<p class="setting">Cat Speed:</p>
+				<div class="rangeslider text-center"> 
+				  <label>1</label>
+				  <input type="range" min="1" max="10" step="0.1" class="myslider" id="sliderRange"> 
+				  <label>10</label>
+				</div>
+				<p class="setting">Cat Type:</p>
+				<div class="cat-icon-container">
+					<img class="cat-icon" id="catImg" src="/assets/images/cat-generator/catImage.png">
+					<img class="cat-icon" id="catImg1" src="/assets/images/cat-generator/catImage1.png">
+					<img class="cat-icon" id="catImg2" src="/assets/images/cat-generator/catImage2.png">
+					<img class="cat-icon" id="catImg3" src="/assets/images/cat-generator/catImage3.png">
+				</div>
+				<p class="setting">Background:</p>
+				<div class="background-container">
+					<img class="background-img" id="space" src="/assets/images/cat-generator/space.png">
+					<img class="background-img" id="sky" src="/assets/images/cat-generator/sky.png">
+					<img class="background-img" id="city" src="/assets/images/cat-generator/city.jpg">
+					<img class="background-img" id="snowy" src="/assets/images/cat-generator/snowy.png">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 text-center">
+				<div id="spawn" class="btn">Spawn</div>
+				<div id="destroy" class="btn">Destroy</div>
+			</div>
+		</div>
+	</div>
+	<script src="/assets/js/cat-generator/game.js"></script>
+	</body>
+</html>
+
+<style>
+	p {
+		margin-top: 1.2rem;
+	}
+	
+	label {
+		vertical-align: middle;
+		padding: 0 5px;
+	}
+	
+	.container-fluid {
+		/*background-color: #B0F0EF;*/
+		background-color: #edfeff;
+		height: 100vh;
+		font-weight: 600;
+	}
+	
+	.row {
+		margin: 0 !important;
+	}
+	
+	.title {
+		margin-top: 20px;
+		margin-bottom: 28px;
+		font-size: 40px;
+		font-weight: 600;
+	}
+	
+	#game-layer {
+		border-radius: 10px;
+	}
+	
+	.control-panel {
+		background-color: #a1a1a1;
+		/*background-color: rgba(108,179,196,1);*/
+		border-radius: 10px;
+		color: white;
+		padding: 0 35px 25px 35px;
+	}
+	
+	.control-title {
+		font-size: 22px;
+	}
+	
+	.setting {
+		font-size: 17px;
+	}
+	
+	.myslider {
+	  -webkit-appearance: none;
+	  appearance: none;
+	  width: 75%;
+	  height: 15px;
+	  border-radius: 5px;  
+	  background: #e8e8e8;
+	  outline: none;
+	  opacity: 0.85;
+	  -webkit-transition: .2s;
+	  cursor: pointer;
+	}
+	
+	.myslider:hover {
+	  opacity: 1;
+	}
+
+	.myslider::-webkit-slider-thumb {
+	  -webkit-appearance: none;
+	  appearance: none;
+	  width: 20px;
+	  height: 20px;
+	  border-radius: 50%; 
+	  background: pink;
+	}
+
+	.myslider::-moz-range-thumb {
+	  width: 20px;
+	  height: 20px;
+	  border-radius: 50%;
+	  background: pink;
+	}
+
+	.cat-icon-container {
+		display: flex;
+		justify-content: center;
+	}
+	
+	.cat-icon {
+		max-height: 110px;
+		max-width: 130px;
+		padding: 8px;
+		margin-left: 5px;
+		margin-right: 5px;
+		background: none;
+		border: 2px solid pink;
+		border-radius: 5px;
+	}
+	
+	#catImg1 {
+		padding-top: 0;
+		padding-bottom: 0;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	
+	.cat-icon:hover {
+		border-color: pink;
+		box-shadow: 0 3px 6px 0 pink;
+		cursor: pointer;
+	}
+	
+	.background-container {
+		display: flex;
+		justify-content: center;
+	}
+	
+	.background-img {
+		max-height: 105px;
+		margin-left: 5px;
+		margin-right: 5px;
+		border-radius: 5px;
+	}
+	
+	.background-img:hover {
+		box-shadow: 0 9px 8px 0 rgba(0,0,0,0.2);
+		cursor: pointer;
+	}
+	
+	.btn {
+		background-color: pink;
+		border-radius: 10px;
+		margin: 5px 10px;
+		width: 175px;
+		font-size: 17px;
+		font-weight: 600;
+	}
+	
+	.btn:hover {
+		/*background-color: #955FF4;*/
+		background-color: #8dd2e3;
+		color: white;
+	}
+</style>
+    </body>
+</html>
