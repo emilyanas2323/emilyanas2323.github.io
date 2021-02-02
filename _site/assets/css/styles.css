@@ -86,7 +86,7 @@ textarea:focus, input:focus { outline: none; }
 
 .project-title { font-size: 28px; font-family: 'Roboto Slab', serif; margin: 0; }
 
-.project-description { padding-bottom: 18px; }
+.project-description { padding-bottom: 18px; padding-right: 25px; text-align: justify; }
 
 .project-description > a, .modal-body > p > a { color: rgba(245, 106, 106, 0.5); }
 
@@ -127,7 +127,8 @@ textarea:focus, input:focus { outline: none; }
 
 .job-company { font-family: 'Open Sans', sans-serif; font-size: 18.5px; color: rgba(245, 106, 106, 0.6); }
 
-.job-description { padding: 2px 24px 50px 42px; margin: 0; }
+.job-description { padding: 2px 23px 50px 23px; margin: 0; }
+.job-description .space { height: 8px; }
 
 @media (max-width: 768px) { #work-banner { height: 35vh; }
   #experience-row { margin-top: 5px; margin-bottom: 30px; }

@@ -247,6 +247,8 @@ textarea:focus, input:focus {
 
 .project-description {
     padding-bottom: 18px;
+    padding-right: 25px;
+    text-align: justify;
 }
 
 .project-description > a, .modal-body > p > a {
@@ -381,8 +383,12 @@ textarea:focus, input:focus {
 }
 
 .job-description {
-    padding: 2px 24px 50px 42px;
+    padding: 2px 23px 50px 23px;
     margin: 0;
+
+    .space {
+        height: 8px;
+    }
 }
 
 @media (max-width: 768px) { 
