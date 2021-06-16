@@ -14,9 +14,11 @@
             <li class="nav-item">
                 <a class="nav-link" href="/experience/">Experience</a>
             </li>
+            <!--
             <li class="nav-item">
                 <a class="nav-link" href="/contact/">Contact</a>
             </li>
+            -->
             <li class="nav-item" id="attribution-link">
                 <a class="nav-link" data-toggle="modal" data-target="#attributionModal">Attribution</a>
             </li>

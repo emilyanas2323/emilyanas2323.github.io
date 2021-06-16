@@ -251,6 +251,12 @@ textarea:focus, input:focus {
     text-align: justify;
 }
 
+@media (max-width: 1000px) { 
+    .project-description {
+        padding-right: 0;
+    }
+}
+
 .project-description > a, .modal-body > p > a {
     color: rgba(245, 106, 106, 0.5);
 }
